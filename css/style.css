@@ -1,0 +1,219 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  /* background-color: white; */
+  margin: 0;
+  padding: 0;
+  height: 0vh;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.content {
+  padding-left: 250px;
+  padding-right: 250px;
+}
+.header .logo {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 150px;
+}
+
+.header .logo img {
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: auto;
+}
+
+.header .menu {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: flex-end;
+  padding-right: 150px;
+}
+.header .menu li {
+  padding: 8px 16px;
+}
+
+.header .menu li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner img {
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+}
+.homeInfo {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.homeInfo .info {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.homeInfo .theSun {
+  position: relative;
+}
+
+.homeInfo .theSun .deform {
+  width: 200px;
+  height: 200px;
+  background: rgb(244, 232, 179);
+  background: radial-gradient(
+    circle,
+    rgba(244, 232, 179, 1) 0%,
+    rgba(187, 140, 30, 1) 100%
+  );
+  left: 270px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 50% 50%;
+  background: #fc3;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.22, rgb(204, 153, 0)),
+    color-stop(1, rgb(255, 219, 112))
+  );
+  background-image: -moz-linear-gradient(
+    center bottom,
+    rgb(204, 153, 0) 22%,
+    rgb(255, 219, 112) 100%
+  );
+  top: 302px;
+  left: 462px;
+  border: none;
+  -webkit-box-shadow: 0 0 50px #c90;
+  -moz-box-shadow: 0 0 50px #c90;
+  box-shadow: 0 0 50px #c90;
+  z-index: 100;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.homeInfo .theSun .rotate {
+  width: 100%;
+  height: 100%;
+  animation: circle 10s infinite linear;
+  transform-origin: 50% 50%;
+}
+
+.homeInfo .theSun .counterrotate {
+  width: 90px;
+  height: 90px;
+  animation: ccircle 5s infinite linear;
+  border-radius: 50%;
+}
+
+/* .homeInfo .theSun .planet {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  border-radius: 50%;
+  left: 0px;
+  top: 0px;
+  background: rgb(187, 140, 30, 1);
+  opacity: 0.5;
+  display: block;
+} */
+
+@keyframes circle {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes ccircle {
+  from {
+    transform: rotateZ(360deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
+}
+
+.homeInfo .char {
+  height: 150px;
+  display: flex;
+  /* flex-direction: row;
+  justify-content: left;
+  align-items: flex-end;
+  margin-left: 100px;
+  position: relative; */
+}
+.homeInfo .char .colunm {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: flex-end;
+  margin-left: 100px;
+  position: relative;
+}
+
+.homeInfo .char .item {
+  background-color: transparent;
+  height: 130px;
+  width: 60px;
+  position: absolute;
+  border: 3px solid whitesmoke;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #a9a49c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+}
+
+.homeInfo .char .total {
+  background-color: #ffc800e0;
+  height: 90px;
+  width: 65px;
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #a9a49c;
+}
+
+.homeInfo .char .total.colunm1 {
+  height: 90px;
+}
+
+.homeInfo .char .total.colunm2 {
+  height: 98px;
+}
+.homeInfo .char .total.colunm3 {
+  height: 80px;
+}
+.homeInfo .char .total.colunm4 {
+  height: 95px;
+}
+.homeInfo .char .total.colunm5 {
+  height: 80px;
+}
+.homeInfo .char .total.colunm6 {
+  height: 08px;
+  width: 55px;
+  left: 5px;
+}
