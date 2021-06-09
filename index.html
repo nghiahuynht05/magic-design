@@ -123,20 +123,77 @@
                 </div>
             </div>
             <div class="slider-show">
-                <div class="slider">
-                    <div class="slider sliderImage1"></div>
-                    <div class="slider sliderImage2"></div>
-                    <div class="slider sliderImage3"></div>
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="./image/slider-1.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="./image/slider-2.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="./image/slider-3.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="./image/slider-3.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="./image/slider-3.jpg" style="width:100%">
+                    </div>
                 </div>
-                <div class="thumbnail">
-                    <div class="thumbnail1"></div>
-                    <div class="thumbnail2"></div>
-                    <div class="thumbnail3"></div>
+
+                <div class=" thumbnail">
+                    <div class="select" onclick="currentSlide(0)">
+                        <img src="./image/thumb-1.jpg">
+                    </div>
+                    <div class="select" onclick="currentSlide(1)">
+                        <img src="./image/thumb-2.jpg">
+                    </div>
+                    <div class="select" onclick="currentSlide(2)">
+                        <img src="./image/thumb-3.jpg">
+                    </div>
+                    <div class="select" onclick="currentSlide(1)">
+                        <img src="./image/thumb-2.jpg">
+                    </div>
+                    <div class="select" onclick="currentSlide(2)">
+                        <img src="./image/thumb-3.jpg">
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
 
 </body>
+<script>
+    var slideIndex;
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("select");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        slides[slideIndex].style.display = "block";
+        dots[slideIndex].className += " active";
+        //chuyển đến slide tiếp theo
+        slideIndex++;
+        //nếu đang ở slide cuối cùng thì chuyển về slide đầu
+        if (slideIndex > slides.length - 1) {
+            slideIndex = 0
+        }
+        //tự động chuyển đổi slide sau 5s
+        setTimeout(showSlides, 5000);
+    }
+    var slidesBar = Math.floor((document.getElementsByClassName("mySlides").length) / 2, 2);
+    showSlides(slideIndex = slidesBar);
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+</script>
 
 </html>

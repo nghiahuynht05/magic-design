@@ -80,22 +80,28 @@ body {
   width: 200px;
   height: 200px;
   background: rgb(244, 232, 179);
-  background: radial-gradient(circle,
-      rgba(244, 232, 179, 1) 0%,
-      rgba(187, 140, 30, 1) 100%);
+  background: radial-gradient(
+    circle,
+    rgba(244, 232, 179, 1) 0%,
+    rgba(187, 140, 30, 1) 100%
+  );
   left: 270px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 50% 50%;
   background: #fc3;
-  background-image: -webkit-gradient(linear,
-      left bottom,
-      left top,
-      color-stop(0.22, rgb(204, 153, 0)),
-      color-stop(1, rgb(255, 219, 112)));
-  background-image: -moz-linear-gradient(center bottom,
-      rgb(204, 153, 0) 22%,
-      rgb(255, 219, 112) 100%);
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.22, rgb(204, 153, 0)),
+    color-stop(1, rgb(255, 219, 112))
+  );
+  background-image: -moz-linear-gradient(
+    center bottom,
+    rgb(204, 153, 0) 22%,
+    rgb(255, 219, 112) 100%
+  );
   top: 302px;
   left: 462px;
   border: none;
@@ -248,63 +254,65 @@ body {
 }
 
 .brand .slider-show {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
+  margin: auto;
 }
 
-.brand .slider-show .slider {
-  background-position: center;
-  background-size: cover;
-  height: 250px;
+.brand .slider-show .mySlides {
+  display: none;
 }
 
-.brand .slider .sliderImage1 {
-  background-image: url(../image/slider-1.jpg);
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 3s;
 }
 
-.brand .slider.sliderImage2 {
-  background-image: url(../image/slider-2.jpg);
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.brand .slider.sliderImage3 {
-  background-image: url(../image/slider-3.jpg);
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.brand .slider-show {
-  position: relative;
+.slideshow-container {
+  max-width: 400px;
+  margin: auto;
+}
+
+/* khi được hover, active đổi màu nền */
+.brand .slider-show .thumbnail .select.active img,
+.brand .slider-show .thumbnail .select:hover img {
+  opacity: 1;
 }
 
 .brand .slider-show .thumbnail {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: row;
   align-content: center;
   justify-content: center;
 }
 
-.brand .slider-show .thumbnail .thumbnail1 {
+.brand .slider-show .thumbnail .select img {
   background-position: center;
   background-size: cover;
   height: 70px;
   width: 170px;
   margin: 10px;
-  background-image: url(../image/thumb-1.jpg);
-}
-
-.brand .slider-show .thumbnail .thumbnail2 {
-  background-position: center;
-  background-size: cover;
-  height: 70px;
-  width: 170px;
-  margin: 10px;
-  background-image: url(../image/thumb-2.jpg);
-}
-
-.brand .slider-show .thumbnail .thumbnail3 {
-  background-position: center;
-  background-size: cover;
-  height: 70px;
-  width: 170px;
-  margin: 10px;
-  background-image: url(../image/thumb-3.jpg);
+  opacity: 0.4;
 }
