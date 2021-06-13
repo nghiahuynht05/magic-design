@@ -1,5 +1,9 @@
+body {
+  background-color: #ecf0f3;
+  color: rgba(22, 22, 22, 0.78);
+}
+
 .container {
-  background-color: white;
   width: 100%;
   margin: auto;
 }
@@ -7,7 +11,6 @@
   top: 0px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: white;
 }
 
 .header .logo {
@@ -109,29 +112,26 @@
   grid-template-columns: 50% 50%;
 }
 
-.brand .info .detail {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
-}
-
-.brand .info .detail img {
-  /* font-weight: bold;
-  font-size: 43px;
-  text-transform: uppercase; */
+.brand .info .detail .image {
+  width: 90%;
+  height: 300px;
+  background-image: url(https://via.placeholder.com/360x360.png?text=Magic+Design);
+  margin: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .brand-content {
   padding-top: 20px;
   padding-bottom: 20px;
+  height: 180px;
 }
-.brand .info .detail .more {
-  background-color: white;
+.info .detail .more {
+  background-color: #ecf0f3;
   width: 120px;
   height: 35px;
+  margin: auto;
   text-align: center;
   display: flex;
   flex-wrap: nowrap;
@@ -144,7 +144,7 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.brand .info .detail .more .text {
+.info .detail .more .text {
   background-color: #ffc800e0;
   margin: auto;
   width: 80%;
@@ -215,4 +215,35 @@
   height: 70px;
   width: 170px;
   opacity: 0.4;
+}
+
+.logo {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.logo .info .detail .image {
+  width: 90%;
+  height: 300px;
+  background-image: url(https://via.placeholder.com/360x360.png?text=Magic+Design);
+  margin: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logo .slider-logo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.logo .slider-logo .image {
+  height: 120px;
+  width: 120px;
+}
+
+.logo .slider-logo .image img {
+  height: 100%;
+  width: 100%;
 }
