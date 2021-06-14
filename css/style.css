@@ -218,10 +218,9 @@ body {
 .brand .slider-show .thumbnail .select img {
   background-position: center;
   background-size: cover;
-  height: 70px;
-  width: 170px;
-  opacity: 0.4;
-  transform: scale(1.1);
+  height: 125px;
+  width: 250px;
+  transform: scale(0.6);
   transform-origin: center;
 }
 

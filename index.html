@@ -250,13 +250,33 @@
 
         slides[slideIndex].style.display = "block";
         dots[slideIndex].style.zIndex = "999";
+        dots[slideIndex].style.position = 'absolute';
+        dots[slideIndex].style.bottom = '40px'
         dots[slideIndex].className += " active";
     }
     var slidesBar = Math.floor((document.getElementsByClassName("mySlides").length) / 2, 2);
     showSlides(slideIndex = slidesBar);
 
+    console.log(slideIndex)
     function currentSlide(n) {
-        showSlides(slideIndex = n);
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("select");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+            if (dots[i].style.zIndex) {
+                dots[i].style.zIndex = 0
+            }
+        }
+
+        slides[n].style.display = "block";
+        dots[n].style.zIndex = "999";
+        dots[n].style.position = 'absolute';
+        dots[n].style.bottom = '40px'
+        dots[n].className += " active";
     }
 
     function navToLink(id) {
@@ -267,17 +287,7 @@
         });
     }
     navToLink('more-brand')
-    var arr = ['./image/logo-01.jpg', './image/logo-02.jpg', './image/logo-03.jpg', './image/logo-04.jpg'];
-    function arrChange() {
-        return arr.shift()
-    }
-    function updateimage() {
-        setInterval(function () {
-            arr.push(arrChange());
-            document.getElementsByClassName('image').src
-            console.log(arr);
-        }, 3000);
-    }
+
 </script>
 
 </html>
