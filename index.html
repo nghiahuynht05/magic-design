@@ -142,50 +142,83 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="slider-logo">
-                    <div id="slideshow">
-                        <div class="image">
-                            <img src="https://picsum.photos/120/120" alt="blue tit">
+
+                    <div class="parent">
+                        <div class="movingDiv">
+                            <div class="rect ">
+                                <div class="slideshow">
+                                    <div class="image">
+                                        <img src="./image/logo-01.jpg" onclick="window.open('./brand.html','_blank')">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rect ">
+                                <div class="slideshow">
+                                    <div class="image">
+                                        <img src="./image/logo-02.jpg" onclick="window.open('./brand.html','_blank')">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rect ">
+                                <div class="slideshow">
+                                    <div class="image">
+                                        <img src="./image/logo-03.jpg" onclick="window.open('./brand.html','_blank')">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div id="slideshow">
-                        <div class="image">
-                            <img src="https://picsum.photos/120/120" alt="blue tit">
+
+                    <div class="parent">
+                        <div class="movingDivDown">
+                            <div class="rect ">
+                                <div class="slideshow" onclick="window.open('./brand.html','_blank')">
+                                    <div class="image">
+                                        <img src="./image/logo-01.jpg" onclick="window.open('./brand.html','_blank')">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rect ">
+                                <div class="slideshow">
+                                    <div class="image">
+                                        <img src="./image/logo-02.jpg" onclick="window.open('./brand.html','_blank')">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rect ">
+                                <div class="slideshow">
+                                    <div class="image">
+                                        <img src="./image/logo-03.jpg" onclick="window.open('./brand.html','_blank')">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div id="slideshow">
-                        <div class="image">
-                            <img src="https://picsum.photos/120/120" alt="blue tit">
-                        </div>
-                    </div>
-                    <div id="slideshow">
-                        <div class="image">
-                            <img src="https://picsum.photos/120/120" alt="blue tit">
-                        </div>
-                    </div>
-                    <div id="slideshow">
-                        <div class="image">
-                            <img src="https://picsum.photos/120/120" alt="blue tit">
-                        </div>
-                    </div>
-                    <div id="slideshow">
-                        <div class="image">
-                            <img src="https://picsum.photos/120/120" alt="blue tit">
-                        </div>
-                    </div>
-                    <div id="slideshow">
-                        <div class="image">
-                            <img src="https://picsum.photos/120/120" alt="blue tit">
-                        </div>
-                    </div>
-                    <div id="slideshow">
-                        <div class="image">
-                            <img src="https://picsum.photos/120/120" alt="blue tit">
-                        </div>
-                    </div>
-                    <div id="slideshow">
-                        <div class="image">
-                            <img src="https://picsum.photos/120/120" alt="blue tit">
+                    <div class="parent">
+                        <div class="movingDiv">
+                            <div class="rect ">
+                                <div class="slideshow">
+                                    <div class="image">
+                                        <img src="./image/logo-01.jpg" onclick="window.open('./brand.html','_blank')">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rect ">
+                                <div class="slideshow">
+                                    <div class="image">
+                                        <img src="./image/logo-02.jpg" onclick="window.open('./brand.html','_blank')">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rect ">
+                                <div class="slideshow">
+                                    <div class="image">
+                                        <img src="./image/logo-03.jpg" onclick="window.open('./brand.html','_blank')">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -210,18 +243,14 @@
         }
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" active", "");
+            if (dots[i].style.zIndex) {
+                dots[i].style.zIndex = 0
+            }
         }
 
         slides[slideIndex].style.display = "block";
+        dots[slideIndex].style.zIndex = "999";
         dots[slideIndex].className += " active";
-        //chuyển đến slide tiếp theo
-        slideIndex++;
-        //nếu đang ở slide cuối cùng thì chuyển về slide đầu
-        if (slideIndex > slides.length - 1) {
-            slideIndex = 0
-        }
-        //tự động chuyển đổi slide sau 5s
-        setTimeout(showSlides, 30000);
     }
     var slidesBar = Math.floor((document.getElementsByClassName("mySlides").length) / 2, 2);
     showSlides(slideIndex = slidesBar);
@@ -238,7 +267,17 @@
         });
     }
     navToLink('more-brand')
-
+    var arr = ['./image/logo-01.jpg', './image/logo-02.jpg', './image/logo-03.jpg', './image/logo-04.jpg'];
+    function arrChange() {
+        return arr.shift()
+    }
+    function updateimage() {
+        setInterval(function () {
+            arr.push(arrChange());
+            document.getElementsByClassName('image').src
+            console.log(arr);
+        }, 3000);
+    }
 </script>
 
 </html>
