@@ -200,7 +200,7 @@ body {
   position: relative;
 }
 
-.brand .slider-show .thumbnail .item .image-01 {
+.brand .slider-show .thumbnail .image-01 {
   background-image: url(../image/thumb-1.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -209,7 +209,7 @@ body {
   width: 100%;
 }
 
-.brand .slider-show .thumbnail .item-center .image-02 {
+.brand .slider-show .thumbnail .image-02 {
   background-image: url(../image/thumb-2.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -218,7 +218,7 @@ body {
   width: 100%;
 }
 
-.brand .slider-show .thumbnail .item .image-03 {
+.brand .slider-show .thumbnail .image-03 {
   background-image: url(../image/thumb-3.jpg);
   background-position: center;
   background-repeat: no-repeat;
