@@ -1,19 +1,19 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Verdana, sans-serif;
   background-color: #ecf0f3;
   color: rgba(22, 22, 22, 0.78);
-  /* font-size: 13px; */
+  font-size: 15px;
 }
 
 .container {
-  width: 100%;
+  width: 80%;
   margin: auto;
   height: 100vh;
 }
 
 .navbar {
   overflow: hidden;
-  width: 70%;
+  width: 80%;
   position: fixed;
   top: 0;
   background-color: #ecf0f3;
@@ -60,93 +60,128 @@ body {
 
 .content {
   height: 100%;
-  width: 70%;
+  width: 80%;
   margin: auto;
-}
-
-.content .banner-band {
-  width: 100%;
-  height: 300px;
-  margin: auto;
-  background-image: url(../image/banner.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  margin-bottom: 40px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .band {
   margin: 0 auto;
   padding-top: 50px;
   padding-bottom: 20px;
+  width: auto;
+  height: auto;
 }
 
-.band .banner img {
-  display: block;
-  margin: 0 auto;
+.band .banner-band {
+  width: auto;
+  height: auto;
+  margin: auto;
 }
 
-.band .banner .homeInfo {
+.band .magic {
+  font-size: 150px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  height: 100%;
+  display: inline-block;
+}
+
+.band .design {
+  font-size: 150px;
+  font-weight: normal;
+  text-transform: uppercase;
+  height: 100%;
+  display: inline-block;
+}
+
+.band .brand {
+  font-size: 100px;
+  font-weight: 100;
+  text-transform: uppercase;
+  height: 100%;
+  margin: auto;
+  padding-left: 15%;
+}
+
+.band .banner {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
 }
 
-.band .banner .homeInfo .info {
-  text-align: left;
-  padding-left: 100px;
+.band .banner-info {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
 }
 
-.band-img {
-  height: 250px;
-  background-image: url(../image/char.png);
+.banner-info .char {
+  background-image: url("../image/char.png");
+  background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  background-repeat: no-repeat;
+  height: 400px;
+  width: 400px;
+}
+
+.banner-info .view-data {
+  padding: 70px 0px;
+}
+
+.band .banner-logo {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  margin: auto;
 }
 
 .band-sun {
+  margin: auto;
+  height: 80%;
+  width: 100%;
+  position: relative;
   background-image: url(../image/sun.png);
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   grid-area: 1 / 2 / span 2 / span 4;
 }
 
 .band-sun .sun {
-  height: 120%;
+  position: inherit;
+  height: 100%;
   background-image: url(../image/loading.png);
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
 }
 
 .brand {
-  display: block;
+  height: auto;
+  width: auto;
 }
 
 .brand .info {
   display: inline-block;
   float: left;
   width: 50%;
-  margin-top: 40px;
+  margin: auto;
 }
 
-.brand .info .detail .image {
+.info .detail .image {
   width: 90%;
-  height: 300px;
-  background-image: url(../image/band.jpg);
-  margin: auto;
-  background-position: center;
-  background-repeat: no-repeat;
-  /* background-size: cover; */
+  height: auto;
+  font-size: 120px;
+  padding: 50px 0px;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .brand-content {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  height: 180px;
+  padding: 10% 0px;
 }
 
 .info .detail .more {
@@ -157,7 +192,7 @@ body {
   text-align: center;
   flex-wrap: nowrap;
   align-content: space-around;
-  border: 1px solid #e4d9d9;
+  border: 1px solid #b3a7a7;
   border-radius: 10px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
@@ -166,6 +201,7 @@ body {
   background-color: #ffc800e0;
   margin: auto;
   width: 80%;
+  height: 21px;
   border-radius: 10px;
   padding-top: 7%;
   padding-bottom: 7%;
@@ -175,6 +211,7 @@ body {
   position: relative;
   display: inline-block;
   margin: auto;
+  width: 50%;
 }
 
 .brand .slider-show .mySlides {
@@ -285,16 +322,6 @@ body {
   width: 50%;
 }
 
-.logo .info .detail .image {
-  width: 90%;
-  height: 300px;
-  background-image: url(../image/logo.jpg);
-  margin: auto;
-  background-position: center;
-  background-repeat: no-repeat;
-  /* background-size: cover; */
-}
-
 .logo .slider-logo {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -335,7 +362,7 @@ body {
   padding-top: 10%;
 }
 
-.movingDiv {
+/* .movingDiv {
   height: 100%;
   animation: moveUpWithFade 10s linear infinite;
 }
@@ -343,7 +370,7 @@ body {
 .movingDivDown {
   height: 100%;
   animation: moveUpWithFadeDown 10s linear infinite;
-}
+} */
 
 @keyframes moveUpWithFade {
   from {
@@ -384,29 +411,45 @@ body {
   width: 50%;
 }
 
-.aboutus .info .image {
-  width: 90%;
-  height: 300px;
-  margin: auto;
-  background-image: url(../image/about-us.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 .aboutus .about-image {
   width: 50%;
   height: 100%;
   margin: auto;
   display: inline-block;
 }
+
 .aboutus .about-image .image {
   width: 80%;
   height: 80%;
   background-image: url(../image/about-image.jpg);
-  background-repeat: round;
-  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% center;
   margin: auto;
   border-radius: 20px;
+}
+
+.aboutus .info .detail .more {
+  background-color: #ecf0f3;
+  width: 152px;
+  height: 50px;
+  /* margin: auto; */
+  text-align: center;
+  flex-wrap: nowrap;
+  align-content: space-around;
+  border: 1px solid #b3a7a7;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.aboutus .info .detail .more .text {
+  background-color: #ffc800e0;
+  margin: auto;
+  width: 80%;
+  height: 28px;
+  border-radius: 10px;
+  padding-top: 7%;
+  padding-bottom: 7%;
 }
 
 .contact {
@@ -423,6 +466,11 @@ body {
   float: left;
 }
 
+.contact .us {
+  padding: 20px 0px;
+  font-size: 25px;
+}
+
 .contact .contact-image {
   width: 50%;
   height: 100%;
@@ -433,15 +481,21 @@ body {
   width: 80%;
   height: 80%;
   background-image: url(../image/contact.jpg);
-  background-repeat: round;
-  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% center;
   margin: auto;
   border-radius: 20px;
 }
+
+form label {
+  padding-left: 5px;
+}
+
 input[type="text"] {
   width: 100%;
   padding: 12px 20px;
-  margin: 25px 0;
+  margin: 0px 0px 25px 0px;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -476,6 +530,10 @@ input[type="submit"]:hover {
   background-color: #ffc800e0;
 }
 
+.contact .detail {
+  padding: 20px 0px;
+}
+
 .footer {
   height: 100px;
   width: 100%;
@@ -483,12 +541,25 @@ input[type="submit"]:hover {
 }
 
 @media only screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+
   .navbar .menu {
     display: none;
   }
+
   .content {
     height: 100%;
     width: 100%;
+  }
+
+  .band .banner {
+    grid-template-columns: none;
+  }
+
+  .band .banner-logo {
+    margin: 0;
   }
 
   .band .banner .homeInfo {
@@ -498,7 +569,7 @@ input[type="submit"]:hover {
   .band .banner .homeInfo .info {
     display: inline;
     text-align: left;
-    padding-top: 0px; 
+    padding-top: 0px;
     padding-left: 0px;
   }
   .band-sun {
@@ -509,5 +580,20 @@ input[type="submit"]:hover {
     background-position: center;
     background-repeat: no-repeat;
     grid-area: 1 / 2 / span 2 / span 4;
+  }
+
+  .brand .slider-show{
+    width: 100%;
+  }
+
+  .logo .slider-logo{
+    width: 100%;
+  }
+
+  .aboutus .about-image{
+    width: 100%;
+  }
+  .contact .contact-image{
+    width: 100%;
   }
 }
