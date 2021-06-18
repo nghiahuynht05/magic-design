@@ -71,6 +71,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  margin-bottom: 40px;
 }
 
 .band {
@@ -92,7 +93,6 @@ body {
 
 .band .banner .homeInfo .info {
   text-align: left;
-  padding-top: 100px;
   padding-left: 100px;
 }
 
@@ -129,6 +129,7 @@ body {
   display: inline-block;
   float: left;
   width: 50%;
+  margin-top: 40px;
 }
 
 .brand .info .detail .image {
@@ -151,7 +152,7 @@ body {
   background-color: #ecf0f3;
   width: 120px;
   height: 35px;
-  margin: auto;
+  /* margin: auto; */
   text-align: center;
   flex-wrap: nowrap;
   align-content: space-around;
@@ -322,6 +323,7 @@ body {
   width: 125px;
   height: 100%;
   overflow: hidden;
+  margin: auto;
 }
 
 .rect {
@@ -443,7 +445,7 @@ input[type="text"] {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  box-shadow: 3px 5px 0px #a5a0a0;
+  box-shadow: 3px 3px 0px #a5a0a0;
 }
 
 input[type="message"] {
@@ -455,6 +457,7 @@ input[type="message"] {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  box-shadow: 3px 3px 0px #a5a0a0;
 }
 
 input[type="submit"] {
@@ -476,4 +479,34 @@ input[type="submit"]:hover {
   height: 100px;
   width: 100%;
   background-color: bisque;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar .menu {
+    display: none;
+  }
+  .content {
+    height: 100%;
+    width: 100%;
+  }
+
+  .band .banner .homeInfo {
+    display: block;
+  }
+
+  .band .banner .homeInfo .info {
+    display: inline;
+    text-align: left;
+    padding-top: 0px; 
+    padding-left: 0px;
+  }
+  .band-sun {
+    height: 300px;
+    width: 100%;
+    background-image: url(../image/sun.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-area: 1 / 2 / span 2 / span 4;
+  }
 }
