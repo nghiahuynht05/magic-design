@@ -1,0 +1,86 @@
+body {
+  font-family: Verdana, sans-serif;
+  background-color: #ecf0f3;
+  color: rgba(22, 22, 22, 0.78);
+  font-size: 15px;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  height: 100vh;
+}
+
+.navbar {
+  overflow: hidden;
+  width: 80%;
+  position: fixed;
+  top: 0;
+  background-color: #ecf0f3;
+  margin: auto;
+  z-index: 999999;
+}
+
+.header {
+  display: block;
+  margin: 0 auto;
+}
+
+.header .logo {
+  float: left;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.header .logo img {
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: auto;
+}
+
+.header .menu {
+  display: inline-block;
+  float: right;
+}
+
+.header .menu li {
+  padding: 8px 16px;
+  display: inline;
+}
+
+.header .menu li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer {
+  grid-area: f;
+}
+
+.content {
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+}
+
+.brand {
+    padding-top: 5%;
+    width: 100%;
+    height: auto;
+}
+
+.brand-name {
+  font-size: 120px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  text-align: center;
+}
+.brand-notes {
+  font-size: 20px;
+  font-weight: normal;
+  text-align: center;
+}
