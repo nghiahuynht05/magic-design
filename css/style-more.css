@@ -79,13 +79,14 @@ body {
   text-transform: uppercase;
   text-align: center;
 }
+
 .brand-notes {
   font-size: 20px;
   font-weight: normal;
   text-align: center;
 }
 
-.brand-info {
+.logo-info {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding-top: 3%;
@@ -116,21 +117,32 @@ body {
 }
 
 
-.logo-item:hover {opacity: 0.7;}
+.logo-item:hover {
+  opacity: 0.7;
+}
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
 }
 
 /* Modal Content (image) */
@@ -154,7 +166,8 @@ body {
 }
 
 /* Add Animation */
-.modal-content, #caption {  
+.modal-content,
+#caption {
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
@@ -162,13 +175,23 @@ body {
 }
 
 @-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)} 
-  to {-webkit-transform:scale(1)}
+  from {
+    -webkit-transform: scale(0)
+  }
+
+  to {
+    -webkit-transform: scale(1)
+  }
 }
 
 @keyframes zoom {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
 }
 
 /* The Close Button */
@@ -189,8 +212,38 @@ body {
   cursor: pointer;
 }
 
+.brand-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding-top: 3%;
+}
+
+.project-info .project-contact {
+  font-size: 32px;
+}
+
+.project-name {
+  font-size: 32px;
+  font-weight: bolder;
+  padding: 5% 0px;
+}
+
+.project-detail {
+  font-size: 25px;
+  padding: 5% 0px;
+}
+
+.project-contact {
+  padding: 5% 0px;
+}
+
+.project-location {
+  padding: 2% 0;
+}
+
 /* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 700px) {
   .modal-content {
     width: 100%;
   }

@@ -480,6 +480,7 @@ body {
   margin: auto;
   display: inline-block;
 }
+
 .contact .contact-image .image {
   width: 80%;
   height: 95%;
@@ -577,6 +578,7 @@ input[type="submit"]:hover {
     padding-top: 0px;
     padding-left: 0px;
   }
+
   .band-sun {
     height: 300px;
     width: 100%;
@@ -612,7 +614,12 @@ input[type="submit"]:hover {
     grid-template-columns: none;
     grid-template-rows: 1fr 1fr;
   }
+
   .contact .contact-image {
     width: 100%;
   }
+}
+
+.more:hover {
+  cursor: pointer;
 }
