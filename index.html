@@ -15,7 +15,7 @@
         <div class="navbar">
             <div class="header">
                 <div class="logo">
-                    <img src="./image/logo.png" alt="">
+                    <a href="./index.html"><img src="./image/logo.png" alt=""></a>
                 </div>
                 <ul class="menu">
                     <li><a href="#band">BAND</a></li>
@@ -59,7 +59,7 @@
                         <div class="brand-content">Để thương hiệu có thể truyền tải được giá trị cốt lỗi cũng như chất
                             lượng của sản phẩm/ dịch vụ đến với toàn bộ khách hàng và thị trường bên ngoài, doanh nghiệp
                             cần xây dựng hình ảnh và nhận diện thương hiệu đầy đủ, mạnh mẽ.</div>
-                        <div class="more">
+                        <div class="more" onclick="navToLink('more-brand')">
                             <div class="text" id='more-brand' onclick="navToLink('more-brand')">MORE...</div>
                         </div>
                     </div>
@@ -96,7 +96,7 @@
                         <div class="brand-content">Logo mang lại cho doanh nghiệp của bạn một bản sắc, làm cho thương
                             hiệu của bạn trở nên gắn bó hơn, cung cấp nền tảng cho những nổ lực xâyy dựng thương hiệu
                             trong tương lai của bạn và hơn thế nữa!</div>
-                        <div class="more">
+                        <div class="more" onclick="navToLink('more-logo')">
                             <div class="text" id='more-logo' onclick="navToLink('more-logo')">MORE...</div>
                         </div>
                     </div>
@@ -208,8 +208,9 @@
                             muốn được nghe những câu chuyện những ấp ủ và cùng các bạn thực hiện nó. Một sự thật không
                             thể chối cãi là chúng ta sẽ không biết cuối con đường là điều gì khi không quyết tâm đi hết
                             con đường đó.</div>
-                        <div class="more">
-                            <div class="text" id='more-about' onclick="navToLink('more-about')">"You can do it. We can help"</div>
+                        <div class="more" onclick="navToLink('more-about')">
+                            <div class="text" id='more-about' onclick="navToLink('more-about')">"You can do it. We can
+                                help"</div>
                         </div>
                     </div>
                 </div>
@@ -221,7 +222,7 @@
             <div class="contact" id="contact">
                 <div class="info">
                     <div class="us">Cùng chúng tôi chạm tới những cảm xúc!!!</div>
-                    <form action="/action_page.php">
+                    <form action="">
                         <label for="fname">Your name (Tên của bạn)</label>
                         <input type="text" id="fname" name="firstname" placeholder="">
 
@@ -304,26 +305,23 @@
 
     function navToLink(id) {
         var eleId = document.getElementById(id)
-        eleId.addEventListener('click', function () {
-            switch (id) {
-                case 'more-brand': {
-                    window.open('./brand.html');
-                    break;
-                }
-                case 'more-logo': {
-                    window.open('./logo.html');
-                    break;
-                }
-                case 'more-about': {
-                    window.open('./about.html');
-                    break;
-                }
-                default: {
-                    window.alert("Something went wrong please try again!")
-                }
+        switch (id) {
+            case 'more-brand': {
+                window.open('./brand.html');
+                break;
             }
-
-        });
+            case 'more-logo': {
+                window.open('./logo.html');
+                break;
+            }
+            case 'more-about': {
+                window.open('./about.html');
+                break;
+            }
+            default: {
+                window.alert("Something went wrong please try again!")
+            }
+        }
     }
 
 </script>
