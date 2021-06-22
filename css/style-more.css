@@ -8,7 +8,7 @@ body {
 .container {
   width: 80%;
   margin: auto;
-  height: 100vh;
+  height: 100%;
 }
 
 .navbar {
@@ -246,5 +246,62 @@ body {
 @media only screen and (max-width: 700px) {
   .modal-content {
     width: 100%;
+  }
+}
+
+footer ul {
+  display: inline-grid;
+  grid-auto-flow: row;
+  grid-gap: 24px;
+  justify-items: center;
+  margin: auto;
+  list-style-type: none;
+}
+
+@media (min-width: 500px) {
+  footer ul {
+    grid-auto-flow: column;
+  }
+}
+
+footer a {
+  color: rgba(22, 22, 22, 0.78);
+  text-decoration: none;
+  box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4);
+}
+
+footer a:hover {
+  box-shadow: inset 0 -1.2em 0 hsl(47deg 98% 55%);
+}
+
+footer li:last-child {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+footer li:hover ~ li p {
+  animation: wave-animation 0.3s infinite;
+}
+
+/* below is just for demo styling */
+
+footer {
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background-color: #ecf0f3;
+  line-height: 1.3;
+}
+
+@keyframes wave-animation {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-15deg);
   }
 }
