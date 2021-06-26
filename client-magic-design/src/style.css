@@ -45,7 +45,7 @@ body {
 .header .logo {
   height: 100px;
   float: left;
-  display: inline-block;
+  /* display: inline-block; */
   margin: 0 auto;
 }
 
@@ -57,7 +57,7 @@ body {
 }
 
 .header .menu {
-  display: inline-block;
+  /* display: inline-block; */
   float: right;
 }
 
@@ -80,18 +80,19 @@ body {
   width: 100%;
   margin: auto;
   display: grid;
-  grid-template-rows:auto;
+  grid-template-rows: auto;
   position: relative;
 }
 
-.layout{
+.layout {
   width: 80%;
-    margin: auto;
+  margin: auto;
+  height: 100%;
 }
 
 .band {
   width: auto;
-  height: auto;
+  height: 90%;
   margin: 0 auto;
 }
 
@@ -120,11 +121,11 @@ body {
 
 .band .brand {
   font-size: 70px;
-    font-weight: 100;
-    text-transform: uppercase;
-    height: 100%;
-    margin: auto;
-    padding-right: 45%;
+  font-weight: 100;
+  text-transform: uppercase;
+  height: 100%;
+  margin: auto;
+  padding-right: 45%;
 }
 
 .band .banner {
@@ -184,12 +185,12 @@ body {
 }
 
 .brand {
-  height: auto;
+  height: 90%;
   width: auto;
 }
 
 .brand .info {
-  display: inline-block;
+  /* display: inline-block; */
   float: left;
   width: 50%;
   margin: auto;
@@ -338,13 +339,14 @@ body {
 }
 
 .logo {
+  width: auto;
   display: block;
-  height: 100%;
-  margin: auto;
+  height: 90%;
+  margin: auto 0;
 }
 
 .logo .info {
-  display: inline-block;
+  /* display: inline-block; */
   float: left;
   width: 50%;
 }
@@ -426,24 +428,23 @@ body {
 }
 
 .aboutus {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 80%;
-  height: auto;
-  margin: auto;
+  width: auto;
+  display: block;
+  height: 90%;
+  margin: auto 0;
 }
 
 .aboutus .info {
-  display: inline-block;
+  /* display: inline-block; */
   float: left;
-  width: 100%;
+  width: 50%;
 }
 
 .aboutus .about-image {
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 80%;
   margin: auto;
-  display: inline-block;
+  display: grid;
 }
 
 .aboutus .about-image .image {
@@ -483,17 +484,14 @@ body {
 }
 
 .contact {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 80%;
-  height: auto;
-  margin: auto;
+  width: auto;
+  margin: auto 0;
 }
 
 .contact .info {
   font-family: 'Gotham-Thin', sans-serif;
-  display: inline-block;
-  width: 100%;
+  /* display: inline-block; */
+  width: 50%;
   height: 100%;
   float: left;
 }
@@ -504,15 +502,15 @@ body {
 }
 
 .contact .contact-image {
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 80%;
   margin: auto;
-  display: inline-block;
+  display: grid;
 }
 
 .contact .contact-image .image {
   width: 80%;
-  height: 95%;
+  height: 500px;
   background-image: url('../src/image/contact.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -576,7 +574,7 @@ input[type="submit"]:hover {
   width: 150px;
   background-color: #ecf0f3;
   border: 2px solid #bfbfbf;
-  border-radius: 15px;
+  border-radius: 10px;
   text-align: center;
   cursor: pointer;
   position: relative;
@@ -588,7 +586,7 @@ input[type="submit"]:hover {
   width: 80%;
   background-color: #ffc800e0;
   margin: auto;
-  border-radius: 99px;
+  border-radius: 10px;
 }
 
 .button-text span {
@@ -701,7 +699,6 @@ input[type="submit"]:hover {
   height: 100%;
   width: 100%;
   font-family: 'Gotham-Thin', sans-serif;
-  padding-top: 50px;
 }
 
 footer {
@@ -710,57 +707,58 @@ footer {
   height: auto;
 }
 
-footer .footer-image .logo img{
+footer .footer-image .logo img {
   height: 80px;
-  
-}
-.footer-info{
-  display: block;
-  width: 100%;
-  height: 100%;
+
 }
 
-.footer-info-name{
+.footer-info {
+  display: block;
+  width: 100%;
+}
+
+.footer-info-name {
   float: left;
-  display: inline-block;
+  /* display: inline-block; */
   height: auto;
   font-weight: bolder;
   font-size: 30px;
   font-family: 'Gotham-Medium', sans-serif;
 }
 
-.footer-info-address{
-  display: inline-block;
-    float: right;
-    height: auto;
+.footer-info-address {
+  /* display: inline-block; */
+  float: right;
+  height: auto;
 }
 
-.address-info{
+.address-info {
   display: inline-block;
   padding-right: 130px;
 }
 
-.footer-image{
+.footer-image {
   display: block;
   width: 100%;
   height: auto;
 }
 
-.footer-image .logo{
+.footer-image .logo {
   display: inline-block;
 }
 
-.logo-social{
+.logo-social {
   font-size: 10px;
-  display: inline-block;
+  /* display: inline-block; */
   float: right;
   height: auto;
   padding-right: 10%;
 }
 
-.social-info{
+.social-info {
   display: inline-block;
   padding-right: 40px;
+  cursor: pointer;
 }
 
 @media (min-width: 500px) {
@@ -812,4 +810,8 @@ footer {
   75% {
     transform: rotate(-15deg);
   }
+}
+
+#contect-layout .fp-tableCell {
+  vertical-align: unset
 }

@@ -4,6 +4,20 @@ import './style.css';
 import slider1 from './image/slider-1.jpg';
 import slider2 from './image/slider-2.jpg';
 import slider3 from './image/slider-3.jpg';
+
+import slidershow1 from './image/logo-01.jpg';
+import slidershow2 from './image/logo-02.jpg';
+import slidershow3 from './image/logo-03.jpg';
+import slidershow4 from './image/logo-04.jpg';
+import slidershow5 from './image/logo-05.jpg';
+import slidershow6 from './image/logo-06.jpg';
+import slidershow7 from './image/logo-07.jpg';
+import slidershow8 from './image/logo-08.jpg';
+import slidershow9 from './image/logo-09.jpg';
+import slidershow10 from './image/logo-10.jpg';
+import slidershow11 from './image/logo-11.jpg';
+import slidershow12 from './image/logo-12.jpg';
+
 import logo from './image/logo.png';
 
 import reportWebVitals from './reportWebVitals';
@@ -14,11 +28,16 @@ const Fullpage = () => (
 
     //fullpage options
     licenseKey={'YOUR_KEY_HERE'}
-    scrollingSpeed={1000} /* Options here */
+    scrollingSpeed={500} /* Options here */
     scrollHorizontally={true}  /* Because we are using the extension */
     scrollHorizontallyKey={'YOUR KEY HERE'}
 
     render={({ state, fullpageApi }) => {
+      const customStype = {
+        "font-family": "Gotham-Medium",
+        "font-weight": "bolder"
+      }
+
       return (
         <ReactFullpage.Wrapper>
           <div className="container">
@@ -170,28 +189,28 @@ const Fullpage = () => (
                           <div className="rect ">
                             <div className="slideshow">
                               <div className="image">
-                                <img src="./image/logo-01.jpg" onclick="window.open('./brand.html','_blank')" alt='' />
+                                <img src={slidershow1} onclick="window.open('./brand.html','_blank')" alt='' />
                               </div>
                             </div>
                           </div>
                           <div className="rect ">
                             <div className="slideshow">
                               <div className="image">
-                                <img src="./image/logo-02.jpg" onclick="window.open('./brand.html','_blank')" alt='' />
+                                <img src={slidershow2} onclick="window.open('./brand.html','_blank')" alt='' />
                               </div>
                             </div>
                           </div>
                           <div className="rect ">
                             <div className="slideshow">
                               <div className="image">
-                                <img src="./image/logo-03.jpg" onclick="window.open('./brand.html','_blank')" alt='' />
+                                <img src={slidershow3} onclick="window.open('./brand.html','_blank')" alt='' />
                               </div>
                             </div>
                           </div>
                           <div className="rect ">
                             <div className="slideshow">
                               <div className="image">
-                                <img src="./image/logo-12.jpg" onclick="window.open('./brand.html','_blank')" alt='' />
+                                <img src={slidershow12} onclick="window.open('./brand.html','_blank')" alt='' />
                               </div>
                             </div>
                           </div>
@@ -202,28 +221,28 @@ const Fullpage = () => (
                           <div className="rect ">
                             <div className="slideshow" onclick="window.open('./brand.html','_blank')">
                               <div className="image">
-                                <img src="./image/logo-04.jpg" onclick="window.open('./brand.html','_blank')" alt='' />
+                                <img src={slidershow4} onclick="window.open('./brand.html','_blank')" alt='' />
                               </div>
                             </div>
                           </div>
                           <div className="rect ">
                             <div className="slideshow">
                               <div className="image">
-                                <img src="./image/logo-05.jpg" onclick="window.open('./brand.html','_blank')" alt='' />
+                                <img src={slidershow5} onclick="window.open('./brand.html','_blank')" alt='' />
                               </div>
                             </div>
                           </div>
                           <div className="rect ">
                             <div className="slideshow">
                               <div className="image">
-                                <img src="./image/logo-06.jpg" onclick="window.open('./brand.html','_blank')" alt='' />
+                                <img src={slidershow6} onclick="window.open('./brand.html','_blank')" alt='' />
                               </div>
                             </div>
                           </div>
                           <div className="rect ">
                             <div className="slideshow">
                               <div className="image">
-                                <img src="./image/logo-11.jpg" onclick="window.open('./brand.html','_blank')" alt='' />
+                                <img src={slidershow11} onclick="window.open('./brand.html','_blank')" alt='' />
                               </div>
                             </div>
                           </div>
@@ -234,28 +253,28 @@ const Fullpage = () => (
                           <div className="rect ">
                             <div className="slideshow">
                               <div className="image">
-                                <img src="./image/logo-07.jpg" onclick="window.open('./brand.html','_blank')" alt='' />
+                                <img src={slidershow7} onclick="window.open('./brand.html','_blank')" alt='' />
                               </div>
                             </div>
                           </div>
                           <div className="rect ">
                             <div className="slideshow">
                               <div className="image">
-                                <img src="./image/logo-08.jpg" onclick="window.open('./brand.html','_blank')" alt='' />
+                                <img src={slidershow8} onclick="window.open('./brand.html','_blank')" alt='' />
                               </div>
                             </div>
                           </div>
                           <div className="rect ">
                             <div className="slideshow">
                               <div className="image">
-                                <img src="./image/logo-09.jpg" onclick="window.open('./brand.html','_blank')" alt='' />
+                                <img src={slidershow9} onclick="window.open('./brand.html','_blank')" alt='' />
                               </div>
                             </div>
                           </div>
                           <div className="rect ">
                             <div className="slideshow">
                               <div className="image">
-                                <img src="./image/logo-10.jpg" onclick="window.open('./brand.html','_blank')" alt='' />
+                                <img src={slidershow10} onclick="window.open('./brand.html','_blank')" alt='' />
                               </div>
                             </div>
                           </div>
@@ -281,30 +300,32 @@ const Fullpage = () => (
                   </div>
                 </div>
                 <div className="aboutus" id="aboutus">
-                  <div className="info">
-                    <div className="detail">
-                      <div className="image"> About US</div>
-                      <div className="brand-content">Chúng tôi tin rằng mọi hành trình đều đi từ những ý tưởng. Chúng
-                        tôi
-                        muốn được nghe những câu chuyện những ấp ủ và cùng các bạn thực hiện nó. Một sự thật
-                        không
-                        thể chối cãi là chúng ta sẽ không biết cuối con đường là điều gì khi không quyết tâm đi
-                        hết
-                        con đường đó.</div>
-                      <div>
-                        <button className="botton-type" onclick="navToLink('more-about')">
-                          <div className="button-text"><span>MORE...</span></div>
-                        </button>
+                  <div className="layout">
+                    <div className="info">
+                      <div className="detail">
+                        <div className="image"> About US</div>
+                        <div className="brand-content">Chúng tôi tin rằng mọi hành trình đều đi từ những ý tưởng. Chúng
+                          tôi
+                          muốn được nghe những câu chuyện những ấp ủ và cùng các bạn thực hiện nó. Một sự thật
+                          không
+                          thể chối cãi là chúng ta sẽ không biết cuối con đường là điều gì khi không quyết tâm đi
+                          hết
+                          con đường đó.</div>
+                        <div>
+                          <button className="botton-type" onclick="navToLink('more-about')">
+                            <div className="button-text"><span>MORE...</span></div>
+                          </button>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="about-image">
-                    <div className="image">
+                    <div className="about-image">
+                      <div className="image">
+                      </div>
                     </div>
                   </div>
                 </div>
               </section>
-              <section className="section">
+              <section className="section" id="contect-layout">
                 <div className="navbar">
                   <div className="header">
                     <div className="logo">
@@ -320,26 +341,29 @@ const Fullpage = () => (
                   </div>
                 </div>
                 <div className="contact" id="contact">
-                  <div className="info">
-                    <div className="us">Cùng chúng tôi chạm tới những cảm xúc!!!</div>
-                    <form action>
-                      <label htmlFor="fname">Your name (Tên của bạn)</label>
-                      <input autoComplete="off" type="text" id="fname" name="firstname" placeholder />
-                      <label htmlFor="lname">Your email (Email của bạn)</label>
-                      <input autoComplete="off" type="text" id="lname" name="lastname" placeholder />
-                      <label htmlFor="lname">Specialization (Chuyên ngành)</label>
-                      <input autoComplete="off" type="text" id="lname" name="lastname" placeholder />
-                      <label htmlFor="lname">Your messgae (Lời nhắn của bạn)</label>
-                      <input autoComplete="off" type="message" id="lname" name="lastname" placeholder />
-                      <div>
-                        <button className="botton-type" onclick="navToLink('more-about')">
-                          <div className="button-text"><span>Send</span></div>
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-                  <div className="contact-image">
-                    <div class="image"></div>
+                  <div className="layout">
+                    <div className="info">
+                      <div className="us">Cùng chúng tôi chạm tới những cảm xúc!!!</div>
+                      <form action>
+                        <label htmlFor="fname">Your name (Tên của bạn)</label>
+                        <input autoComplete="off" type="text" id="fname" name="firstname" placeholder />
+                        <label htmlFor="lname">Your email (Email của bạn)</label>
+                        <input autoComplete="off" type="text" id="lname" name="lastname" placeholder />
+                        <label htmlFor="lname">Specialization (Chuyên ngành)</label>
+                        <input autoComplete="off" type="text" id="lname" name="lastname" placeholder />
+                        <label htmlFor="lname">Your messgae (Lời nhắn của bạn)</label>
+                        <input autoComplete="off" type="message" id="lname" name="lastname" placeholder />
+                        <div>
+                          <button className="botton-type" onclick="navToLink('more-about')" style={customStype}>
+                            <div className="button-text"><span>Send</span></div>
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                    <div className="contact-image">
+                      <div className="image"></div>
+                    </div>
+
                   </div>
                 </div>
                 <footer className="footer">
@@ -366,19 +390,19 @@ const Fullpage = () => (
                     </div>
                     <div className="logo-social">
                       <div className="social-info">
-                        <i className="fab fa-facebook-f fa-3x" />
+                        <i className="fab fa-facebook-f fa-5x" onClick={() => window.open("https://www.facebook.com/tiendat.cao.1485", "_blank")}></i>
                       </div>
                       <div className="social-info">
-                        <i className="fab fa-instagram fa-3x" />
+                        <i className="fab fa-instagram fa-5x" onClick={() => window.open("https://www.instagram.com/mdsportwear1902/", "_blank")}></i>
                       </div>
                       <div className="social-info">
-                        <i className="fab fa-pinterest-p fa-3x" />
+                        <i className="fab fa-pinterest-p fa-5x" onClick={() => window.open("https://www.facebook.com/tiendat.cao.1485", "_blank")}></i>
                       </div>
                       <div className="social-info">
-                        <i className="fab fa-twitter fa-3x" />
+                        <i className="fab fa-twitter fa-5x" onClick={() => window.open("https://www.facebook.com/tiendat.cao.1485", "_blank")}></i>
                       </div>
                       <div className="social-info">
-                        <i className="fab fa-tiktok fa-3x" />
+                        <i className="fab fa-tiktok fa-5x" onClick={() => window.open("https://www.facebook.com/tiendat.cao.1485", "_blank")}></i>
                       </div>
                     </div>
                   </div>
