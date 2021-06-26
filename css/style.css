@@ -81,13 +81,13 @@ body {
   width: 100%;
   margin: auto;
   display: grid;
-  grid-template-rows:auto;
+  grid-template-rows: auto;
   position: relative;
 }
 
-.layout{
+.layout {
   width: 80%;
-    margin: auto;
+  margin: auto;
 }
 
 .band {
@@ -121,11 +121,11 @@ body {
 
 .band .brand {
   font-size: 70px;
-    font-weight: 100;
-    text-transform: uppercase;
-    height: 100%;
-    margin: auto;
-    padding-right: 45%;
+  font-weight: 100;
+  text-transform: uppercase;
+  height: 100%;
+  margin: auto;
+  padding-right: 45%;
 }
 
 .band .banner {
@@ -157,18 +157,18 @@ body {
 
 .band .banner-logo {
   display: inline-block;
-  width: 50%;
+  width: 100%;
   height: 100%;
   margin: auto;
 }
 
 .band-sun {
   margin: auto;
-  height: 80%;
-  width: 120%;
+  height: 100%;
+  width: 100%;
   position: relative;
-  background-size: cover;
-  background-image: url(../image/sun.png);
+  background-size: contain;
+  background-image: url('../image/sun.png');
   background-position: center;
   background-repeat: no-repeat;
   grid-area: 1 / 2 / span 2 / span 4;
@@ -598,6 +598,58 @@ input[type="submit"]:hover {
   left: 30%;
 }
 
+@media only screen and (max-width: 768px) {
+  .band .banner {
+    grid-template-columns: none;
+  }
+
+  .band-sun {
+    height: 300px;
+    width: 100%;
+    background-image: url(../image/sun.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-area: 1 / 2 / span 2 / span 4;
+  }
+
+  .brand .slider-show {
+    width: 100%;
+    padding-top: 2%;
+  }
+
+  .logo .slider-logo {
+    width: 100%;
+  }
+
+  .aboutus {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
+    width: 80%;
+    height: auto;
+    margin: auto;
+  }
+
+  .aboutus .about-image {
+    width: 100%;
+    padding-top: 2%;
+  }
+
+  .contact {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
+    width: 80%;
+    height: auto;
+    margin: auto;
+  }
+
+  .contact .contact-image {
+    width: 100%;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   body {
     font-size: 32px;
@@ -711,17 +763,18 @@ footer {
   height: auto;
 }
 
-footer .footer-image .logo img{
+footer .footer-image .logo img {
   height: 80px;
-  
+
 }
-.footer-info{
+
+.footer-info {
   display: block;
   width: 100%;
   height: 50px;
 }
 
-.footer-info-name{
+.footer-info-name {
   float: left;
   display: inline-block;
   width: 30%;
@@ -731,36 +784,36 @@ footer .footer-image .logo img{
   font-family: 'Gotham-Medium', sans-serif;
 }
 
-.footer-info-address{
+.footer-info-address {
   display: inline-block;
-    float: right;
-    height: auto;
+  float: right;
+  height: auto;
 }
 
-.address-info{
+.address-info {
   display: inline-block;
   padding-right: 130px;
 }
 
-.footer-image{
+.footer-image {
   display: block;
   width: 100%;
   height: auto;
   padding-top: 20px;
 }
 
-.footer-image .logo{
+.footer-image .logo {
   display: inline-block;
 }
 
-.logo-social{
+.logo-social {
   font-size: 10px;
   display: inline-block;
   float: right;
   height: auto;
 }
 
-.social-info{
+.social-info {
   display: inline-block;
   padding-right: 40px;
 }
