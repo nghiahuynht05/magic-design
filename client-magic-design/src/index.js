@@ -41,8 +41,8 @@ const Fullpage = () => (
       return (
         <ReactFullpage.Wrapper>
           <div className="container">
-            <div className="content" id="band">
-              <section className="section">
+            <div className="content">
+              <section className="section" id="band">
                 <div className="navbar">
                   <div className="header">
                     <div className="logo">
@@ -90,7 +90,7 @@ const Fullpage = () => (
                   </div>
                 </div>
               </section>
-              <section className="section">
+              <section className="section" id="brand">
                 <div className="navbar">
                   <div className="header">
                     <div className="logo">
@@ -105,7 +105,7 @@ const Fullpage = () => (
                     </ul>
                   </div>
                 </div>
-                <div className="brand" id="brand">
+                <div className="brand">
                   <div className="layout">
                     <div className="info">
                       <div className="detail">
@@ -151,7 +151,7 @@ const Fullpage = () => (
                   </div>
                 </div>
               </section>
-              <section className="section">
+              <section className="section" id="logo">
                 <div className="navbar">
                   <div className="header">
                     <div className="logo">
@@ -166,7 +166,7 @@ const Fullpage = () => (
                     </ul>
                   </div>
                 </div>
-                <div className="logo" id="logo">
+                <div className="logo">
                   <div className="layout">
                     <div className="info">
                       <div className="detail">
@@ -284,7 +284,7 @@ const Fullpage = () => (
                   </div>
                 </div>
               </section>
-              <section className="section">
+              <section className="section" id="aboutus">
                 <div className="navbar">
                   <div className="header">
                     <div className="logo">
@@ -299,7 +299,7 @@ const Fullpage = () => (
                     </ul>
                   </div>
                 </div>
-                <div className="aboutus" id="aboutus">
+                <div className="aboutus">
                   <div className="layout">
                     <div className="info">
                       <div className="detail">
@@ -340,19 +340,19 @@ const Fullpage = () => (
                     </ul>
                   </div>
                 </div>
-                <div className="contact" id="contact">
+                <div className="contact">
                   <div className="layout">
                     <div className="info">
                       <div className="us">Cùng chúng tôi chạm tới những cảm xúc!!!</div>
                       <form action>
                         <label htmlFor="fname">Your name (Tên của bạn)</label>
-                        <input autoComplete="off" type="text" id="fname" name="firstname" placeholder />
+                        <input autoComplete="off" type="text" id="fname" name="firstname" placeholder="" />
                         <label htmlFor="lname">Your email (Email của bạn)</label>
-                        <input autoComplete="off" type="text" id="lname" name="lastname" placeholder />
+                        <input autoComplete="off" type="text" id="lname" name="lastname" placeholder="" />
                         <label htmlFor="lname">Specialization (Chuyên ngành)</label>
-                        <input autoComplete="off" type="text" id="lname" name="lastname" placeholder />
+                        <input autoComplete="off" type="text" id="lname" name="lastname" placeholder="" />
                         <label htmlFor="lname">Your messgae (Lời nhắn của bạn)</label>
-                        <input autoComplete="off" type="message" id="lname" name="lastname" placeholder />
+                        <input autoComplete="off" type="message" id="lname" name="lastname" placeholder="" />
                         <div>
                           <button className="botton-type" onclick="navToLink('more-about')" style={customStype}>
                             <div className="button-text"><span>Send</span></div>
