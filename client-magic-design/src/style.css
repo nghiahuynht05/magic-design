@@ -66,8 +66,9 @@ body {
   display: inline;
 }
 
-.header .menu li a {
+.header .menu li span {
   text-decoration: none;
+  cursor: pointer;
   color: inherit;
 }
 

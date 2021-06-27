@@ -49,11 +49,11 @@ const Fullpage = () => (
                       <a href="./index.html"><img src={logo} alt="" /></a>
                     </div>
                     <ul className="menu">
-                      <li><a href="#band">BAND</a></li>
-                      <li><a href="#brand">BRAND</a></li>
-                      <li><a href="#logo">LOGO</a></li>
-                      <li><a href="#aboutus">ABOUT US</a></li>
-                      <li><a href="#contact">CONTACT</a></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(1, 0)}>BAND</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(2, 0)}>BRAND</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(3, 0)}>LOGO</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(4, 0)}>ABOUT US</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(5, 0)}>CONTACT</span></li>
                     </ul>
                   </div>
                 </div>
@@ -97,11 +97,11 @@ const Fullpage = () => (
                       <a href="./index.html"><img src={logo} alt="" /></a>
                     </div>
                     <ul className="menu">
-                      <li><a href="#band">BAND</a></li>
-                      <li><a href="#brand">BRAND</a></li>
-                      <li><a href="#logo">LOGO</a></li>
-                      <li><a href="#aboutus">ABOUT US</a></li>
-                      <li><a href="#contact">CONTACT</a></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(1, 0)}>BAND</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(2, 0)}>BRAND</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(3, 0)}>LOGO</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(4, 0)}>ABOUT US</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(5, 0)}>CONTACT</span></li>
                     </ul>
                   </div>
                 </div>
@@ -158,11 +158,11 @@ const Fullpage = () => (
                       <a href="./index.html"><img src={logo} alt="" /></a>
                     </div>
                     <ul className="menu">
-                      <li><a href="#band">BAND</a></li>
-                      <li><a href="#brand">BRAND</a></li>
-                      <li><a href="#logo">LOGO</a></li>
-                      <li><a href="#aboutus">ABOUT US</a></li>
-                      <li><a href="#contact">CONTACT</a></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(1, 0)}>BAND</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(2, 0)}>BRAND</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(3, 0)}>LOGO</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(4, 0)}>ABOUT US</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(5, 0)}>CONTACT</span></li>
                     </ul>
                   </div>
                 </div>
@@ -291,11 +291,11 @@ const Fullpage = () => (
                       <a href="./index.html"><img src={logo} alt="" /></a>
                     </div>
                     <ul className="menu">
-                      <li><a href="#band">BAND</a></li>
-                      <li><a href="#brand">BRAND</a></li>
-                      <li><a href="#logo">LOGO</a></li>
-                      <li><a href="#aboutus">ABOUT US</a></li>
-                      <li><a href="#contact">CONTACT</a></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(1, 0)}>BAND</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(2, 0)}>BRAND</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(3, 0)}>LOGO</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(4, 0)}>ABOUT US</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(5, 0)}>CONTACT</span></li>
                     </ul>
                   </div>
                 </div>
@@ -332,11 +332,11 @@ const Fullpage = () => (
                       <a href="./index.html"><img src={logo} alt="" /></a>
                     </div>
                     <ul className="menu">
-                      <li><a href="#band">BAND</a></li>
-                      <li><a href="#brand">BRAND</a></li>
-                      <li><a href="#logo">LOGO</a></li>
-                      <li><a href="#aboutus">ABOUT US</a></li>
-                      <li><a href="#contact">CONTACT</a></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(1, 0)}>BAND</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(2, 0)}>BRAND</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(3, 0)}>LOGO</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(4, 0)}>ABOUT US</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(5, 0)}>CONTACT</span></li>
                     </ul>
                   </div>
                 </div>
