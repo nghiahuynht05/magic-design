@@ -41,19 +41,19 @@ const Fullpage = () => (
       return (
         <ReactFullpage.Wrapper>
           <div className="container">
-            <div className="content" id="band">
-              <section className="section">
+            <div className="content">
+              <section className="section" id="band">
                 <div className="navbar">
                   <div className="header">
                     <div className="logo">
                       <a href="./index.html"><img src={logo} alt="" /></a>
                     </div>
                     <ul className="menu">
-                      <li><a href="#band">BAND</a></li>
-                      <li><a href="#brand">BRAND</a></li>
-                      <li><a href="#logo">LOGO</a></li>
-                      <li><a href="#aboutus">ABOUT US</a></li>
-                      <li><a href="#contact">CONTACT</a></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(1, 0)}>BAND</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(2, 0)}>BRAND</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(3, 0)}>LOGO</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(4, 0)}>ABOUT US</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(5, 0)}>CONTACT</span></li>
                     </ul>
                   </div>
                 </div>
@@ -90,22 +90,22 @@ const Fullpage = () => (
                   </div>
                 </div>
               </section>
-              <section className="section">
+              <section className="section" id="brand">
                 <div className="navbar">
                   <div className="header">
                     <div className="logo">
                       <a href="./index.html"><img src={logo} alt="" /></a>
                     </div>
                     <ul className="menu">
-                      <li><a href="#band">BAND</a></li>
-                      <li><a href="#brand">BRAND</a></li>
-                      <li><a href="#logo">LOGO</a></li>
-                      <li><a href="#aboutus">ABOUT US</a></li>
-                      <li><a href="#contact">CONTACT</a></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(1, 0)}>BAND</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(2, 0)}>BRAND</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(3, 0)}>LOGO</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(4, 0)}>ABOUT US</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(5, 0)}>CONTACT</span></li>
                     </ul>
                   </div>
                 </div>
-                <div className="brand" id="brand">
+                <div className="brand">
                   <div className="layout">
                     <div className="info">
                       <div className="detail">
@@ -151,22 +151,22 @@ const Fullpage = () => (
                   </div>
                 </div>
               </section>
-              <section className="section">
+              <section className="section" id="logo">
                 <div className="navbar">
                   <div className="header">
                     <div className="logo">
                       <a href="./index.html"><img src={logo} alt="" /></a>
                     </div>
                     <ul className="menu">
-                      <li><a href="#band">BAND</a></li>
-                      <li><a href="#brand">BRAND</a></li>
-                      <li><a href="#logo">LOGO</a></li>
-                      <li><a href="#aboutus">ABOUT US</a></li>
-                      <li><a href="#contact">CONTACT</a></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(1, 0)}>BAND</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(2, 0)}>BRAND</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(3, 0)}>LOGO</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(4, 0)}>ABOUT US</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(5, 0)}>CONTACT</span></li>
                     </ul>
                   </div>
                 </div>
-                <div className="logo" id="logo">
+                <div className="logo">
                   <div className="layout">
                     <div className="info">
                       <div className="detail">
@@ -284,22 +284,22 @@ const Fullpage = () => (
                   </div>
                 </div>
               </section>
-              <section className="section">
+              <section className="section" id="aboutus">
                 <div className="navbar">
                   <div className="header">
                     <div className="logo">
                       <a href="./index.html"><img src={logo} alt="" /></a>
                     </div>
                     <ul className="menu">
-                      <li><a href="#band">BAND</a></li>
-                      <li><a href="#brand">BRAND</a></li>
-                      <li><a href="#logo">LOGO</a></li>
-                      <li><a href="#aboutus">ABOUT US</a></li>
-                      <li><a href="#contact">CONTACT</a></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(1, 0)}>BAND</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(2, 0)}>BRAND</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(3, 0)}>LOGO</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(4, 0)}>ABOUT US</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(5, 0)}>CONTACT</span></li>
                     </ul>
                   </div>
                 </div>
-                <div className="aboutus" id="aboutus">
+                <div className="aboutus">
                   <div className="layout">
                     <div className="info">
                       <div className="detail">
@@ -332,27 +332,27 @@ const Fullpage = () => (
                       <a href="./index.html"><img src={logo} alt="" /></a>
                     </div>
                     <ul className="menu">
-                      <li><a href="#band">BAND</a></li>
-                      <li><a href="#brand">BRAND</a></li>
-                      <li><a href="#logo">LOGO</a></li>
-                      <li><a href="#aboutus">ABOUT US</a></li>
-                      <li><a href="#contact">CONTACT</a></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(1, 0)}>BAND</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(2, 0)}>BRAND</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(3, 0)}>LOGO</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(4, 0)}>ABOUT US</span></li>
+                      <li><span href="" onClick={() => fullpageApi.moveTo(5, 0)}>CONTACT</span></li>
                     </ul>
                   </div>
                 </div>
-                <div className="contact" id="contact">
+                <div className="contact">
                   <div className="layout">
                     <div className="info">
                       <div className="us">Cùng chúng tôi chạm tới những cảm xúc!!!</div>
                       <form action>
                         <label htmlFor="fname">Your name (Tên của bạn)</label>
-                        <input autoComplete="off" type="text" id="fname" name="firstname" placeholder />
+                        <input autoComplete="off" type="text" id="fname" name="firstname" placeholder="" />
                         <label htmlFor="lname">Your email (Email của bạn)</label>
-                        <input autoComplete="off" type="text" id="lname" name="lastname" placeholder />
+                        <input autoComplete="off" type="text" id="lname" name="lastname" placeholder="" />
                         <label htmlFor="lname">Specialization (Chuyên ngành)</label>
-                        <input autoComplete="off" type="text" id="lname" name="lastname" placeholder />
+                        <input autoComplete="off" type="text" id="lname" name="lastname" placeholder="" />
                         <label htmlFor="lname">Your messgae (Lời nhắn của bạn)</label>
-                        <input autoComplete="off" type="message" id="lname" name="lastname" placeholder />
+                        <input autoComplete="off" type="message" id="lname" name="lastname" placeholder="" />
                         <div>
                           <button className="botton-type" onclick="navToLink('more-about')" style={customStype}>
                             <div className="button-text"><span>Send</span></div>

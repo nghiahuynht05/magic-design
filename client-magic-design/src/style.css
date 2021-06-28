@@ -66,8 +66,9 @@ body {
   display: inline;
 }
 
-.header .menu li a {
+.header .menu li span {
   text-decoration: none;
+  cursor: pointer;
   color: inherit;
 }
 
@@ -487,11 +488,11 @@ body {
 .contact {
   width: auto;
   margin: auto 0;
+  height: 70%;
 }
 
 .contact .info {
   font-family: 'Gotham-Thin', sans-serif;
-  /* display: inline-block; */
   width: 50%;
   height: 100%;
   float: left;
@@ -504,14 +505,14 @@ body {
 
 .contact .contact-image {
   width: 50%;
-  height: 80%;
+  height: 100%;
   margin: auto;
   display: grid;
 }
 
 .contact .contact-image .image {
   width: 80%;
-  height: 500px;
+  height: 90%;
   background-image: url('../src/image/contact.jpg');
   background-repeat: no-repeat;
   background-size: cover;
