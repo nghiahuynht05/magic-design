@@ -209,6 +209,7 @@ body {
 .brand-content {
   padding: 10% 0px;
   font-family: 'Gotham-Thin', sans-serif;
+  font-size: 20px;
 }
 
 .info .detail .more {
@@ -519,6 +520,9 @@ body {
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+form{
+  font-size: 17px;
 }
 
 form label {
