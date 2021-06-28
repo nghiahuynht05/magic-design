@@ -18,8 +18,9 @@ import slidershow9 from './image/logo-09.jpg';
 import slidershow10 from './image/logo-10.jpg';
 import slidershow11 from './image/logo-11.jpg';
 import slidershow12 from './image/logo-12.jpg';
-
 import logo from './image/logo.png';
+
+import SliderComponent from './components/SliderComponent';
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -30,6 +31,7 @@ class App extends React.Component {
 
     }
     render() {
+
         const Menu = () => (
             <ReactFullpage
 
@@ -132,7 +134,8 @@ class App extends React.Component {
                                                     </div>
                                                 </div>
                                                 <div className="slider-show">
-                                                    <div className="slideshow-container">
+                                                    < SliderComponent />
+                                                    {/* <div className="slideshow-container">
                                                         <div className="mySlides fade">
                                                             <img src={slider1} style={{ width: '100%', marginLeft: 'auto', marginRight: 'auto' }} alt='' />
                                                         </div>
@@ -153,7 +156,7 @@ class App extends React.Component {
                                                         <div className="item" id="item3">
                                                             <div className="image-03" onclick="clickSlider('item3')" />
                                                         </div>
-                                                    </div>
+                                                    </div> */}
                                                 </div>
                                             </div>
                                         </div>

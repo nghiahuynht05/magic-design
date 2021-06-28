@@ -2,83 +2,86 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/logo.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Web site created using create-react-app" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Magic Design</title>
-  <link rel="stylesheet" href="./css/style.css">
-  <script src="https://kit.fontawesome.com/38d371839a.js" crossorigin="anonymous"></script>
-
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Magic Design</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/38d371839a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" charset="UTF-8"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 </head>
 
 <body>
-  <div id="root">
-  </div>
+    <div id="root">
+    </div>
 </body>
 <script>
-  var slideIndex;
-  function showSlides() {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("item");
-      for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-      }
+    var slideIndex;
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("item");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
 
-      slides[slideIndex].style.display = "block";
-  }
-  var slidesBar = Math.floor((document.getElementsByClassName("mySlides").length) / 2, 2);
-  showSlides(slideIndex = slidesBar);
+        slides[slideIndex].style.display = "block";
+    }
+    var slidesBar = Math.floor((document.getElementsByClassName("mySlides").length) / 2, 2);
+    showSlides(slideIndex = slidesBar);
 
-  function clickSlider(item) {
-      let classClick = document.getElementById(item);
-      let classCenter = document.getElementsByClassName('item-center');
-      for (var i = 0; i < classCenter.length; i++) {
-          classCenter[i].className = classCenter[i].className.replace("item-center", "item");
-      }
-      classClick.classList.remove('item');
-      classClick.classList.add('item-center');
-      switch (item) {
-          case 'item1': {
-              showSlides(slideIndex = 0);
-              break;
-          }
-          case 'item3': {
-              showSlides(slideIndex = 2);
-              break;
-          }
-          default: {
-              showSlides(slideIndex = 1)
-          }
-      }
-  }
+    function clickSlider(item) {
+        let classClick = document.getElementById(item);
+        let classCenter = document.getElementsByClassName('item-center');
+        for (var i = 0; i < classCenter.length; i++) {
+            classCenter[i].className = classCenter[i].className.replace("item-center", "item");
+        }
+        classClick.classList.remove('item');
+        classClick.classList.add('item-center');
+        switch (item) {
+            case 'item1': {
+                showSlides(slideIndex = 0);
+                break;
+            }
+            case 'item3': {
+                showSlides(slideIndex = 2);
+                break;
+            }
+            default: {
+                showSlides(slideIndex = 1)
+            }
+        }
+    }
 
-  clickSlider('item2');
+    clickSlider('item2');
 
-  function navToLink(id) {
-      var eleId = document.getElementById(id)
-      switch (id) {
-          case 'more-brand': {
-              window.open('./brand.html');
-              break;
-          }
-          case 'more-logo': {
-              window.open('./logo.html');
-              break;
-          }
-          case 'more-about': {
-              window.open('./about.html');
-              break;
-          }
-          default: {
-              window.alert("Something went wrong please try again!")
-          }
-      }
-  }
+    function navToLink(id) {
+        var eleId = document.getElementById(id)
+        switch (id) {
+            case 'more-brand': {
+                window.open('./brand.html');
+                break;
+            }
+            case 'more-logo': {
+                window.open('./logo.html');
+                break;
+            }
+            case 'more-about': {
+                window.open('./about.html');
+                break;
+            }
+            default: {
+                window.alert("Something went wrong please try again!")
+            }
+        }
+    }
 
 </script>
 
