@@ -28,7 +28,7 @@ const Fullpage = () => (
 
     //fullpage options
     licenseKey={'YOUR_KEY_HERE'}
-    scrollingSpeed={500} /* Options here */
+    scrollingSpeed={1000} /* Options here */
     scrollHorizontally={true}  /* Because we are using the extension */
     scrollHorizontallyKey={'YOUR KEY HERE'}
 
