@@ -2,7 +2,6 @@ import React from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 import {
     BrowserRouter as Router,
-    Switch,
     Route,
     Link
 } from "react-router-dom";
@@ -243,28 +242,28 @@ class App extends React.Component {
                                                             <div className="rect ">
                                                                 <div className="slideshow">
                                                                     <div className="image">
-                                                                        <img src={slidershow1} onclick="window.open('./brand.html','_blank')" alt='' />
+                                                                        <img src={slidershow1} alt='' />
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div className="rect ">
                                                                 <div className="slideshow">
                                                                     <div className="image">
-                                                                        <img src={slidershow2} onclick="window.open('./brand.html','_blank')" alt='' />
+                                                                        <img src={slidershow2} alt='' />
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div className="rect ">
                                                                 <div className="slideshow">
                                                                     <div className="image">
-                                                                        <img src={slidershow3} onclick="window.open('./brand.html','_blank')" alt='' />
+                                                                        <img src={slidershow3} alt='' />
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div className="rect ">
                                                                 <div className="slideshow">
                                                                     <div className="image">
-                                                                        <img src={slidershow12} onclick="window.open('./brand.html','_blank')" alt='' />
+                                                                        <img src={slidershow12} alt='' />
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -275,28 +274,28 @@ class App extends React.Component {
                                                             <div className="rect ">
                                                                 <div className="slideshow" onclick="window.open('./brand.html','_blank')">
                                                                     <div className="image">
-                                                                        <img src={slidershow4} onclick="window.open('./brand.html','_blank')" alt='' />
+                                                                        <img src={slidershow4} alt='' />
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div className="rect ">
                                                                 <div className="slideshow">
                                                                     <div className="image">
-                                                                        <img src={slidershow5} onclick="window.open('./brand.html','_blank')" alt='' />
+                                                                        <img src={slidershow5} alt='' />
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div className="rect ">
                                                                 <div className="slideshow">
                                                                     <div className="image">
-                                                                        <img src={slidershow6} onclick="window.open('./brand.html','_blank')" alt='' />
+                                                                        <img src={slidershow6} alt='' />
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div className="rect ">
                                                                 <div className="slideshow">
                                                                     <div className="image">
-                                                                        <img src={slidershow11} onclick="window.open('./brand.html','_blank')" alt='' />
+                                                                        <img src={slidershow11} alt='' />
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -307,28 +306,28 @@ class App extends React.Component {
                                                             <div className="rect ">
                                                                 <div className="slideshow">
                                                                     <div className="image">
-                                                                        <img src={slidershow7} onclick="window.open('./brand.html','_blank')" alt='' />
+                                                                        <img src={slidershow7} alt='' />
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div className="rect ">
                                                                 <div className="slideshow">
                                                                     <div className="image">
-                                                                        <img src={slidershow8} onclick="window.open('./brand.html','_blank')" alt='' />
+                                                                        <img src={slidershow8} alt='' />
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div className="rect ">
                                                                 <div className="slideshow">
                                                                     <div className="image">
-                                                                        <img src={slidershow9} onclick="window.open('./brand.html','_blank')" alt='' />
+                                                                        <img src={slidershow9} alt='' />
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div className="rect ">
                                                                 <div className="slideshow">
                                                                     <div className="image">
-                                                                        <img src={slidershow10} onclick="window.open('./brand.html','_blank')" alt='' />
+                                                                        <img src={slidershow10} alt='' />
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -400,7 +399,7 @@ class App extends React.Component {
                                             <div className="layout">
                                                 <div className="info">
                                                     <div className="us">Cùng chúng tôi chạm tới những cảm xúc!!!</div>
-                                                    <form action>
+                                                    <form action=''>
                                                         <label htmlFor="fname">Your name (Tên của bạn)</label>
                                                         <input autoComplete="off" type="text" id="fname" name="firstname" placeholder="" />
                                                         <label htmlFor="lname">Your email (Email của bạn)</label>
@@ -471,29 +470,117 @@ class App extends React.Component {
                 }}
             />
         );
-        function Home() {
-            return <h2>Home</h2>;
-        }
-        function About() {
-            return <h2>About</h2>;
-        }
+
+        const Brand = () => (
+            <ReactFullpage
+                render={({ state, fullpageApi }) => {
+                    return (
+                        <ReactFullpage.Wrapper>
+                            <div className="container">
+                                <div className="content">
+                                    <section className="section" id="band">
+                                        <div className="navbar">
+                                            <div className="header">
+                                                <div className="logo">
+                                                    <a href="/"><img src={logo} alt="" /></a>
+                                                </div>
+                                                <ul className="menu">
+                                                    <li><span href="" onClick={() => fullpageApi.moveTo(1, 0)}>TEAM</span></li>
+                                                    <li><span href="" onClick={() => fullpageApi.moveTo(2, 0)}>LOGO</span></li>
+                                                    <li><span href="" onClick={() => fullpageApi.moveTo(3, 0)}>BRAND</span></li>
+                                                    <li><span href="" onClick={() => fullpageApi.moveTo(4, 0)}>ABOUT US</span></li>
+                                                    <li><span href="" onClick={() => fullpageApi.moveTo(5, 0)}>CONTACT</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div className="band">
+                                            <div className="layout" style={{ display: 'block' }}></div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </ReactFullpage.Wrapper>
+                    )
+                }}
+            />
+        )
+
+        const Band = () => (
+            <ReactFullpage
+                render={({ state, fullpageApi }) => {
+                    return (
+                        <ReactFullpage.Wrapper>
+                            <div className="container">
+                                <div className="content">
+                                    <section className="section" id="band">
+                                        <div className="navbar">
+                                            <div className="header">
+                                                <div className="logo">
+                                                    <a href="/"><img src={logo} alt="" /></a>
+                                                </div>
+                                                <ul className="menu">
+                                                    <li><span href="" onClick={() => fullpageApi.moveTo(1, 0)}>TEAM</span></li>
+                                                    <li><span href="" onClick={() => fullpageApi.moveTo(2, 0)}>LOGO</span></li>
+                                                    <li><span href="" onClick={() => fullpageApi.moveTo(3, 0)}>BRAND</span></li>
+                                                    <li><span href="" onClick={() => fullpageApi.moveTo(4, 0)}>ABOUT US</span></li>
+                                                    <li><span href="" onClick={() => fullpageApi.moveTo(5, 0)}>CONTACT</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div className="band">
+                                            <div className="layout" style={{ display: 'block' }}></div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </ReactFullpage.Wrapper>
+                    )
+                }}
+            />
+        )
+        const Logo = () => (
+            <ReactFullpage
+                render={({ state, fullpageApi }) => {
+                    return (
+                        <ReactFullpage.Wrapper>
+                            <div className="container">
+                                <div className="content">
+                                    <section className="section" id="band">
+                                        <div className="navbar">
+                                            <div className="header">
+                                                <div className="logo">
+                                                    <a href="/"><img src={logo} alt="" /></a>
+                                                </div>
+                                                <ul className="menu">
+                                                    <li><span href="" onClick={() => fullpageApi.moveTo(1, 0)}>TEAM</span></li>
+                                                    <li><span href="" onClick={() => fullpageApi.moveTo(2, 0)}>LOGO</span></li>
+                                                    <li><span href="" onClick={() => fullpageApi.moveTo(3, 0)}>BRAND</span></li>
+                                                    <li><span href="" onClick={() => fullpageApi.moveTo(4, 0)}>ABOUT US</span></li>
+                                                    <li><span href="" onClick={() => fullpageApi.moveTo(5, 0)}>CONTACT</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div className="band">
+                                            <div className="layout" style={{ display: 'block' }}></div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </ReactFullpage.Wrapper>
+                    )
+                }}
+            />
+        )
         return (
             <Router>
-                <div >
+                {/* <div >
                     <Menu />
-                </div>
-                <Switch>
-                    <Route path="/brand">
-                        <About />
-                    </Route>
-                    <Route path="/band">
-                        <Home />
-                    </Route>
-                    <Route path="/logo">
-                        <Home />
-                    </Route>
-                </Switch>
-            </Router>
+                </div> */}
+                < Route path="/" exact component={Menu} />
+                <Route path="/brand" exact component={Brand} />
+                <Route path="/band" exact component={Band} />
+                <Route path="/logo" exact component={Logo} />
+            </Router >
         )
     }
 }
