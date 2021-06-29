@@ -45,7 +45,6 @@ body {
 
 .header .logo {
   height: 80px;
-  float: left;
   display: inline-block;
 }
 
@@ -90,11 +89,13 @@ body {
   grid-template-columns: 1fr 1fr;
   margin: auto;
   height: 100%;
+  justify-items: center;
+  align-items: center;
 }
 
 .band {
   width: auto;
-  height: 90%;
+  height: 85%;
   margin: 0 auto;
 }
 
@@ -187,7 +188,7 @@ body {
 }
 
 .brand {
-  height: 90%;
+  height: 85%;
   width: auto;
 }
 
@@ -208,9 +209,8 @@ body {
 }
 
 .brand-content {
-  padding: 10% 0px;
   font-family: 'Gotham-Thin', sans-serif;
-  font-size: 15px;
+  font-size: 10px;
   width: 65%;
   margin: auto;
   text-align: left;
@@ -345,7 +345,7 @@ body {
 .logo {
   width: auto;
   display: block;
-  height: 90%;
+  height: 85%;
   margin: auto 0;
 }
 
@@ -357,12 +357,12 @@ body {
 .logo .slider-logo {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  height: 100%;
+  height: auto;
 }
 
 .logo .slider-logo .image {
-  height: 120px;
-  width: 120px;
+  height: 70px;
+  width: 70px;
 }
 
 .logo .slider-logo .image img {
@@ -387,9 +387,6 @@ body {
 }
 
 .rect {
-  width: 125px;
-  height: 125px;
-  /* transform:translateY(-100%); */
   padding-bottom: 10%;
   padding-top: 10%;
 }
@@ -433,7 +430,7 @@ body {
 .aboutus {
   width: auto;
   display: block;
-  height: 90%;
+  height: 85%;
   margin: auto 0;
 }
 
@@ -498,7 +495,7 @@ body {
 
 .contact .us {
   padding: 20px 0px;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .contact .contact-image {
@@ -521,7 +518,7 @@ body {
 }
 
 form {
-  font-size: 17px;
+  font-size: 15px;
 }
 
 form label {
@@ -573,8 +570,8 @@ input[type="submit"]:hover {
 
 .botton-type {
   all: unset;
-  height: 40px;
-  width: 150px;
+  height: 30px;
+  width: 120px;
   background-color: #ecf0f3;
   border: 2px solid #bfbfbf;
   border-radius: 10px;

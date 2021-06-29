@@ -26,7 +26,7 @@ class App extends React.Component {
         this.state = {
             display: 'none'
         };
-        this.showSlides = function(item) {
+        this.showSlides = function (item) {
             var i;
             var slides = document.getElementsByClassName("mySlides");
             for (i = 0; i < slides.length; i++) {
@@ -160,7 +160,7 @@ class App extends React.Component {
                                                             doanh
                                                             nghiệp
                                                             cần xây dựng hình ảnh và nhận diện thương hiệu đầy đủ, mạnh mẽ.</div>
-                                                        <div>
+                                                            <div style={{ 'padding-top': '5%' }}>
                                                             <button className="botton-type" onclick="navToLink('more-brand')">
                                                                 <div className="button-text"><span>MORE...</span></div>
                                                             </button>
@@ -220,7 +220,7 @@ class App extends React.Component {
                                                             hiệu của bạn trở nên gắn bó hơn, cung cấp nền tảng cho những nổ lực xâyy dựng thương
                                                             hiệu
                                                             trong tương lai của bạn và hơn thế nữa!</div>
-                                                        <div>
+                                                            <div style={{ 'padding-top': '5%' }}>
                                                             <button className="botton-type" onclick="navToLink('more-logo')">
                                                                 <div className="button-text"><span>MORE...</span></div>
                                                             </button>
@@ -355,7 +355,7 @@ class App extends React.Component {
                                                             thể chối cãi là chúng ta sẽ không biết cuối con đường là điều gì khi không quyết tâm đi
                                                             hết
                                                             con đường đó.</div>
-                                                        <div>
+                                                        <div style={{ 'padding-top': '5%' }}>
                                                             <button className="botton-type" onclick="navToLink('more-about')">
                                                                 <div className="button-text"><span>MORE...</span></div>
                                                             </button>
@@ -422,7 +422,7 @@ class App extends React.Component {
                                                         <div>Phone</div>
                                                         <div>+84 969 57 64 66</div>
                                                     </div>
-                                                    <div className="address-info">
+                                                    <div className="address-info" style={{'padding-right': '0px'}}>
                                                         <div>Adress</div>
                                                         <div>54 Dương Quang Ham, Danang City</div>
                                                     </div>
