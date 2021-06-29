@@ -1,5 +1,12 @@
 import React from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
+
 import './style.css';
 
 import slider1 from './image/slider-1.jpg';
@@ -37,7 +44,6 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        // this.handleClick('item1');
         this.showSlides(1);
     }
 
@@ -89,7 +95,7 @@ class App extends React.Component {
                                         <div className="navbar">
                                             <div className="header">
                                                 <div className="logo">
-                                                    <a href="./index.html"><img src={logo} alt="" /></a>
+                                                    <a href="/"><img src={logo} alt="" /></a>
                                                 </div>
                                                 <ul className="menu">
                                                     <li><span href="" onClick={() => fullpageApi.moveTo(1, 0)}>TEAM</span></li>
@@ -160,9 +166,11 @@ class App extends React.Component {
                                                             doanh
                                                             nghiệp
                                                             cần xây dựng hình ảnh và nhận diện thương hiệu đầy đủ, mạnh mẽ.</div>
-                                                            <div style={{ 'padding-top': '5%' }}>
-                                                            <button className="botton-type" onclick="navToLink('more-brand')">
-                                                                <div className="button-text"><span>MORE...</span></div>
+                                                        <div style={{ 'padding-top': '5%' }}>
+                                                            <button className="botton-type">
+                                                                <Link to="/brand">
+                                                                    <div className="button-text"><span>MORE...</span></div>
+                                                                </Link>
                                                             </button>
                                                         </div>
                                                     </div>
@@ -220,9 +228,11 @@ class App extends React.Component {
                                                             hiệu của bạn trở nên gắn bó hơn, cung cấp nền tảng cho những nổ lực xâyy dựng thương
                                                             hiệu
                                                             trong tương lai của bạn và hơn thế nữa!</div>
-                                                            <div style={{ 'padding-top': '5%' }}>
-                                                            <button className="botton-type" onclick="navToLink('more-logo')">
-                                                                <div className="button-text"><span>MORE...</span></div>
+                                                        <div style={{ 'padding-top': '5%' }}>
+                                                            <button className="botton-type">
+                                                                <Link to="/logo">
+                                                                    <div className="button-text"><span>MORE...</span></div>
+                                                                </Link>
                                                             </button>
                                                         </div>
                                                     </div>
@@ -356,8 +366,10 @@ class App extends React.Component {
                                                             hết
                                                             con đường đó.</div>
                                                         <div style={{ 'padding-top': '5%' }}>
-                                                            <button className="botton-type" onclick="navToLink('more-about')">
-                                                                <div className="button-text"><span>MORE...</span></div>
+                                                            <button className="botton-type">
+                                                                <Link to='/about'>
+                                                                    <div className="button-text"><span>MORE...</span></div>
+                                                                </Link>
                                                             </button>
                                                         </div>
                                                     </div>
@@ -422,7 +434,7 @@ class App extends React.Component {
                                                         <div>Phone</div>
                                                         <div>+84 969 57 64 66</div>
                                                     </div>
-                                                    <div className="address-info" style={{'padding-right': '0px'}}>
+                                                    <div className="address-info" style={{ 'padding-right': '0px' }}>
                                                         <div>Adress</div>
                                                         <div>54 Dương Quang Ham, Danang City</div>
                                                     </div>
@@ -430,7 +442,7 @@ class App extends React.Component {
                                             </div>
                                             <div className="footer-image">
                                                 <div className="logo">
-                                                    <a href="./index.html"><img src={logo} alt="" /></a>
+                                                    <a href="/"><img src={logo} alt="" /></a>
                                                 </div>
                                                 <div className="logo-social">
                                                     <div className="social-info">
@@ -459,10 +471,29 @@ class App extends React.Component {
                 }}
             />
         );
+        function Home() {
+            return <h2>Home</h2>;
+        }
+        function About() {
+            return <h2>About</h2>;
+        }
         return (
-            <div >
-                <Menu />
-            </div>
+            <Router>
+                <div >
+                    <Menu />
+                </div>
+                <Switch>
+                    <Route path="/brand">
+                        <About />
+                    </Route>
+                    <Route path="/band">
+                        <Home />
+                    </Route>
+                    <Route path="/logo">
+                        <Home />
+                    </Route>
+                </Switch>
+            </Router>
         )
     }
 }

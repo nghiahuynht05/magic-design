@@ -21,6 +21,11 @@ body {
   font-size: 12px;
 }
 
+a:-webkit-any-link {
+  color: rgba(22, 22, 22, 0.78);
+
+}
+
 .container {
   width: 70%;
   margin: 50px auto;
