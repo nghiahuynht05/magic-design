@@ -19,16 +19,50 @@ import slidershow10 from './image/logo-10.jpg';
 import slidershow11 from './image/logo-11.jpg';
 import slidershow12 from './image/logo-12.jpg';
 import logo from './image/logo.png';
-
-import SliderComponent from './components/SliderComponent';
+// import SliderComponent from './components/SliderComponent';
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            display: 'none'
         };
+        this.showSlides = function(item) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[item].style.display = "block";
+        }
     }
-    handleAddSection() {
 
+    componentDidMount() {
+        // this.handleClick('item1');
+        this.showSlides(1);
+    }
+
+    handleClick = (item) => {
+        let classClick = document.getElementById(item);
+        let classCenter = document.getElementsByClassName('item-center');
+        for (var i = 0; i < classCenter.length; i++) {
+            classCenter[i].className = classCenter[i].className.replace("item-center", "item");
+        }
+        classClick.classList.remove('item');
+        classClick.classList.add('item-center');
+
+        switch (item) {
+            case 'item1': {
+                this.showSlides(0);
+                break;
+            }
+            case 'item3': {
+                this.showSlides(2);
+                break;
+            }
+            default: {
+                this.showSlides(1)
+            }
+        }
     }
     render() {
 
@@ -58,16 +92,16 @@ class App extends React.Component {
                                                     <a href="./index.html"><img src={logo} alt="" /></a>
                                                 </div>
                                                 <ul className="menu">
-                                                    <li><span href="" onClick={() => fullpageApi.moveTo(1, 0)}>BAND</span></li>
-                                                    <li><span href="" onClick={() => fullpageApi.moveTo(2, 0)}>BRAND</span></li>
-                                                    <li><span href="" onClick={() => fullpageApi.moveTo(3, 0)}>LOGO</span></li>
+                                                    <li><span href="" onClick={() => fullpageApi.moveTo(1, 0)}>TEAM</span></li>
+                                                    <li><span href="" onClick={() => fullpageApi.moveTo(2, 0)}>LOGO</span></li>
+                                                    <li><span href="" onClick={() => fullpageApi.moveTo(3, 0)}>BRAND</span></li>
                                                     <li><span href="" onClick={() => fullpageApi.moveTo(4, 0)}>ABOUT US</span></li>
                                                     <li><span href="" onClick={() => fullpageApi.moveTo(5, 0)}>CONTACT</span></li>
                                                 </ul>
                                             </div>
                                         </div>
                                         <div className="band">
-                                            <div className="layout">
+                                            <div className="layout" style={{ display: 'block' }}>
                                                 <div className="banner-band">
                                                     <div style={{ textAlign: 'center' }}>
                                                         <div className="magic">Magis</div>
@@ -106,9 +140,9 @@ class App extends React.Component {
                                                     <a href="./index.html"><img src={logo} alt="" /></a>
                                                 </div>
                                                 <ul className="menu">
-                                                    <li><span href="" onClick={() => fullpageApi.moveTo(1, 0)}>BAND</span></li>
-                                                    <li><span href="" onClick={() => fullpageApi.moveTo(2, 0)}>BRAND</span></li>
-                                                    <li><span href="" onClick={() => fullpageApi.moveTo(3, 0)}>LOGO</span></li>
+                                                    <li><span href="" onClick={() => fullpageApi.moveTo(1, 0)}>TEAM</span></li>
+                                                    <li><span href="" onClick={() => fullpageApi.moveTo(2, 0)}>LOGO</span></li>
+                                                    <li><span href="" onClick={() => fullpageApi.moveTo(3, 0)}>BRAND</span></li>
                                                     <li><span href="" onClick={() => fullpageApi.moveTo(4, 0)}>ABOUT US</span></li>
                                                     <li><span href="" onClick={() => fullpageApi.moveTo(5, 0)}>CONTACT</span></li>
                                                 </ul>
@@ -134,8 +168,8 @@ class App extends React.Component {
                                                     </div>
                                                 </div>
                                                 <div className="slider-show">
-                                                    < SliderComponent />
-                                                    {/* <div className="slideshow-container">
+                                                    {/* < SliderComponent /> */}
+                                                    <div className="slideshow-container">
                                                         <div className="mySlides fade">
                                                             <img src={slider1} style={{ width: '100%', marginLeft: 'auto', marginRight: 'auto' }} alt='' />
                                                         </div>
@@ -147,16 +181,16 @@ class App extends React.Component {
                                                         </div>
                                                     </div>
                                                     <div className=" thumbnail">
-                                                        <div className="item" id="item1">
-                                                            <div className="image-01" onclick="clickSlider('item1')" />
+                                                        <div className="item" id="item1" onClick={() => this.handleClick('item1')}>
+                                                            <div className="image-01" />
                                                         </div>
-                                                        <div className="item" id="item2">
-                                                            <div className="image-02" onclick="clickSlider('item2')" />
+                                                        <div className="item-center" id="item2" onClick={() => this.handleClick('item2')}>
+                                                            <div className="image-02" />
                                                         </div>
-                                                        <div className="item" id="item3">
-                                                            <div className="image-03" onclick="clickSlider('item3')" />
+                                                        <div className="item" id="item3" onClick={() => this.handleClick('item3')}>
+                                                            <div className="image-03" />
                                                         </div>
-                                                    </div> */}
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -168,9 +202,9 @@ class App extends React.Component {
                                                     <a href="./index.html"><img src={logo} alt="" /></a>
                                                 </div>
                                                 <ul className="menu">
-                                                    <li><span href="" onClick={() => fullpageApi.moveTo(1, 0)}>BAND</span></li>
-                                                    <li><span href="" onClick={() => fullpageApi.moveTo(2, 0)}>BRAND</span></li>
-                                                    <li><span href="" onClick={() => fullpageApi.moveTo(3, 0)}>LOGO</span></li>
+                                                    <li><span href="" onClick={() => fullpageApi.moveTo(1, 0)}>TEAM</span></li>
+                                                    <li><span href="" onClick={() => fullpageApi.moveTo(2, 0)}>LOGO</span></li>
+                                                    <li><span href="" onClick={() => fullpageApi.moveTo(3, 0)}>BRAND</span></li>
                                                     <li><span href="" onClick={() => fullpageApi.moveTo(4, 0)}>ABOUT US</span></li>
                                                     <li><span href="" onClick={() => fullpageApi.moveTo(5, 0)}>CONTACT</span></li>
                                                 </ul>
@@ -301,9 +335,9 @@ class App extends React.Component {
                                                     <a href="./index.html"><img src={logo} alt="" /></a>
                                                 </div>
                                                 <ul className="menu">
-                                                    <li><span href="" onClick={() => fullpageApi.moveTo(1, 0)}>BAND</span></li>
-                                                    <li><span href="" onClick={() => fullpageApi.moveTo(2, 0)}>BRAND</span></li>
-                                                    <li><span href="" onClick={() => fullpageApi.moveTo(3, 0)}>LOGO</span></li>
+                                                    <li><span href="" onClick={() => fullpageApi.moveTo(1, 0)}>TEAM</span></li>
+                                                    <li><span href="" onClick={() => fullpageApi.moveTo(2, 0)}>LOGO</span></li>
+                                                    <li><span href="" onClick={() => fullpageApi.moveTo(3, 0)}>BRAND</span></li>
                                                     <li><span href="" onClick={() => fullpageApi.moveTo(4, 0)}>ABOUT US</span></li>
                                                     <li><span href="" onClick={() => fullpageApi.moveTo(5, 0)}>CONTACT</span></li>
                                                 </ul>
@@ -342,9 +376,9 @@ class App extends React.Component {
                                                     <a href="./index.html"><img src={logo} alt="" /></a>
                                                 </div>
                                                 <ul className="menu">
-                                                    <li><span href="" onClick={() => fullpageApi.moveTo(1, 0)}>BAND</span></li>
-                                                    <li><span href="" onClick={() => fullpageApi.moveTo(2, 0)}>BRAND</span></li>
-                                                    <li><span href="" onClick={() => fullpageApi.moveTo(3, 0)}>LOGO</span></li>
+                                                    <li><span href="" onClick={() => fullpageApi.moveTo(1, 0)}>TEAM</span></li>
+                                                    <li><span href="" onClick={() => fullpageApi.moveTo(2, 0)}>LOGO</span></li>
+                                                    <li><span href="" onClick={() => fullpageApi.moveTo(3, 0)}>BRAND</span></li>
                                                     <li><span href="" onClick={() => fullpageApi.moveTo(4, 0)}>ABOUT US</span></li>
                                                     <li><span href="" onClick={() => fullpageApi.moveTo(5, 0)}>CONTACT</span></li>
                                                 </ul>
