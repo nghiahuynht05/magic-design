@@ -25,7 +25,7 @@ import slidershow10 from './image/logo-10.jpg';
 import slidershow11 from './image/logo-11.jpg';
 import slidershow12 from './image/logo-12.jpg';
 import logo from './image/logo.png';
-// import SliderComponent from './components/SliderComponent';
+
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -596,9 +596,11 @@ class App extends React.Component {
             />
         )
         const Logo = () => (
-            <ReactFullpage
+            <ReactFullpage            
                 render={({ state, fullpageApi }) => {
+                    
                     return (
+                        
                         <ReactFullpage.Wrapper>
                             <div className="container">
                                 <div className="content">
@@ -627,62 +629,62 @@ class App extends React.Component {
                                                 <div className="logo-info">
                                                     <div className="logo-list">
                                                         <div className="logo-item" onClick={() => this.handleClickOpenImage('myimg01')}>
-                                                            <img id="myimg01" src=" ./image/logo-01.jpg" alt="" />
+                                                            <img id="myimg01" src={slidershow1} alt="" />
                                                         </div>
                                                         <div className="logo-item" onClick={() => this.handleClickOpenImage('myimg02')}>
-                                                            <img id="myimg02" src="./image/logo-02.jpg" alt="" />
+                                                            <img id="myimg02" src={slidershow2} alt="" />
                                                         </div>
                                                         <div className="logo-item" onClick={() => this.handleClickOpenImage('myimg03')}>
-                                                            <img id="img03" src="./image/logo-03.jpg" alt="" />
+                                                            <img id="img03" src={slidershow3} alt="" />
                                                         </div>
                                                         <div className="logo-item" onClick={() => this.handleClickOpenImage('myimg04')}>
-                                                            <img id="img04" src="./image/logo-04.jpg" alt="" />
+                                                            <img id="img04" src={slidershow4} alt="" />
                                                         </div>
                                                         <div className="logo-item" onClick={() => this.handleClickOpenImage('myimg05')}>
-                                                            <img id="img05" src="./image/logo-05.jpg" alt="" />
+                                                            <img id="img05" src={slidershow5} alt="" />
                                                         </div>
                                                         <div className="logo-item" onClick={() => this.handleClickOpenImage('myimg06')}>
-                                                            <img id="img06" src="./image/logo-06.jpg" alt="" />
+                                                            <img id="img06" src={slidershow6} alt="" />
                                                         </div>
                                                     </div>
                                                     <div className="logo-list">
                                                         <div className="logo-item">
-                                                            <img src="./image/logo-07.jpg" alt="" />
+                                                            <img src={slidershow1} alt="" />
                                                         </div>
                                                         <div className="logo-item">
-                                                            <img src="./image/logo-08.jpg" alt="" />
+                                                            <img src={slidershow2} alt="" />
                                                         </div>
                                                         <div className="logo-item">
-                                                            <img src="./image/logo-09.jpg" alt="" />
+                                                            <img src={slidershow12} alt="" />
                                                         </div>
                                                         <div className="logo-item">
-                                                            <img src="./image/logo-10.jpg" alt="" />
+                                                            <img src={slidershow3} alt="" />
                                                         </div>
                                                         <div className="logo-item">
-                                                            <img src="./image/logo-11.jpg" alt="" />
+                                                            <img src={slidershow11} alt="" />
                                                         </div>
                                                         <div className="logo-item">
-                                                            <img src="./image/logo-12.jpg" alt="" />
+                                                            <img src={slidershow1} alt="" />
                                                         </div>
                                                     </div>
                                                     <div className="logo-list">
                                                         <div className="logo-item">
-                                                            <img src="./image/logo-01.jpg" alt="" />
+                                                            <img src={slidershow4} alt="" />
                                                         </div>
                                                         <div className="logo-item">
-                                                            <img src="./image/logo-10.jpg" alt="" />
+                                                            <img src={slidershow3} alt="" />
                                                         </div>
                                                         <div className="logo-item">
-                                                            <img src="./image/logo-03.jpg" alt="" />
+                                                            <img src={slidershow5} alt="" />
                                                         </div>
                                                         <div className="logo-item">
-                                                            <img src="./image/logo-08.jpg" alt="" />
+                                                            <img src={slidershow7} alt="" />
                                                         </div>
                                                         <div className="logo-item">
-                                                            <img src="./image/logo-02.jpg" alt="" />
+                                                            <img src={slidershow2} alt="" />
                                                         </div>
                                                         <div className="logo-item">
-                                                            <img src="./image/logo-09.jpg" alt="" />
+                                                            <img src={slidershow10} alt="" />
                                                         </div>
                                                     </div>
                                                 </div>
