@@ -820,3 +820,183 @@ footer {
 #contect-layout .fp-tableCell {
   vertical-align: unset
 }
+
+.brand-component {
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.brand-component .brand {
+  width: auto;
+  height: unset;
+}
+
+.brand-name {
+  font-size: 120px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.brand-notes {
+  font-size: 15px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.brand-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding-top: 3%;
+}
+
+.project-info .project-contact {
+  font-size: 24px;
+}
+
+.project-name {
+  font-size: 24px;
+  font-weight: bolder;
+  padding: 5% 0px;
+}
+
+.project-detail {
+  font-size: 10px;
+  padding: 5% 0px;
+}
+
+.project-contact {
+  padding: 5% 0px;
+}
+
+.project-location {
+  padding: 2% 0;
+}
+
+.logo-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 3%;
+}
+
+.logo-list {
+  width: 100%;
+}
+
+.logo-item {
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  padding: 3% 0px;
+  cursor: pointer;
+  transition: 0.3s;
+
+}
+
+.logo-item img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  -moz-box-shadow: 3px 3px 5px 0px #666;
+  -webkit-box-shadow: 3px 3px 5px 0px #666;
+  box-shadow: 3px 3px 5px 0px #666;
+  border: 2px solid black;
+}
+
+
+.logo-item:hover {
+  opacity: 0.7;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content,
+#caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0)
+  }
+
+  to {
+    -webkit-transform: scale(1)
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}

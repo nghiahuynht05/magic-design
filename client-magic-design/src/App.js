@@ -43,7 +43,7 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        this.showSlides(1);
+        // this.showSlides(1);
     }
 
     handleClick = (item) => {
@@ -69,9 +69,34 @@ class App extends React.Component {
             }
         }
     }
+
+    handleClickOpenImage = (item) => {
+        var modal = document.getElementById("myModal");
+        var img = document.getElementById(item);
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+
+        console.log(modal);
+        console.log(img);
+        console.log(modalImg);
+        console.log(captionText);
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        captionText.innerHTML = img.alt;
+        document.getElementsByClassName('navbar')[0].style.display = 'contents';
+        console.log("end")
+    }
+
+    handleCloseImage = () => {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+        document.getElementsByClassName('navbar')[0].style.display = 'block'
+    }
+
     render() {
 
         const Menu = () => (
+
             <ReactFullpage
 
                 //fullpage options
@@ -180,7 +205,7 @@ class App extends React.Component {
                                                         <div className="mySlides fade">
                                                             <img src={slider1} style={{ width: '100%', marginLeft: 'auto', marginRight: 'auto' }} alt='' />
                                                         </div>
-                                                        <div className="mySlides fade">
+                                                        <div className="mySlides fade" style={{ display: 'block' }}>
                                                             <img src={slider2} style={{ width: '100%', marginLeft: 'auto', marginRight: 'auto' }} alt='' />
                                                         </div>
                                                         <div className="mySlides fade">
@@ -493,8 +518,40 @@ class App extends React.Component {
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div className="band">
-                                            <div className="layout" style={{ display: 'block' }}></div>
+                                        <div className="brand-component">
+                                            <div className="layout" style={{ display: 'block' }}>
+                                                <div className="brand">
+                                                    <div className="brand-name">Brand</div>
+                                                    <div className="brand-notes">Những hình ảnh biết nói, biết an ủi bạn lúc các bạn cần điều gì đó để nhìn lại,
+                                                        tịnh tâm và đi tiếp...</div>
+                                                </div>
+                                                <div className="brand-info">
+                                                    <div className="project-info">
+                                                        <img src="./image/project-01.jpg" alt="" />
+                                                        <div className="project-name">Project Minh Oanh Beauty</div>
+                                                        <div className="project-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+                                                            pariatur aut maxime explicabo, facere doloremque et eius doloribus, sunt beatae expedita
+                                                            excepturi vel voluptatibus assumenda consectetur. Maxime accusamus eius praesentium!</div>
+                                                        <div className="project-contact">
+                                                            <div className="project-location">
+                                                                <div>Email</div>
+                                                                <div>mddesign.tdd@gmail.com</div>
+                                                            </div>
+                                                            <div className="project-location">
+                                                                <div>Phone</div>
+                                                                <div>+84 969 57 64 66</div>
+                                                            </div>
+                                                            <div className="project-location">
+                                                                <div>Address</div>
+                                                                <div>54 Dương Quang Ham, Danang City</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="project-image">
+                                                        <img src alt="" />
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </section>
                                 </div>
@@ -560,11 +617,84 @@ class App extends React.Component {
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div className="band">
-                                            <div className="layout" style={{ display: 'block' }}></div>
+                                        <div className="brand-component">
+                                            <div className="layout" style={{ display: 'block' }}>
+                                                <div className="brand">
+                                                    <div className="brand-name">LOGO</div>
+                                                    <div className="brand-notes">Những hình ảnh biết nói, biết an ủi bạn lúc các bạn cần điều gì đó để nhìn lại,
+                                                        tịnh tâm và đi tiếp...</div>
+                                                </div>
+                                                <div className="logo-info">
+                                                    <div className="logo-list">
+                                                        <div className="logo-item" onClick={() => this.handleClickOpenImage('myimg01')}>
+                                                            <img id="myimg01" src=" ./image/logo-01.jpg" alt="" />
+                                                        </div>
+                                                        <div className="logo-item" onClick={() => this.handleClickOpenImage('myimg02')}>
+                                                            <img id="myimg02" src="./image/logo-02.jpg" alt="" />
+                                                        </div>
+                                                        <div className="logo-item" onClick={() => this.handleClickOpenImage('myimg03')}>
+                                                            <img id="img03" src="./image/logo-03.jpg" alt="" />
+                                                        </div>
+                                                        <div className="logo-item" onClick={() => this.handleClickOpenImage('myimg04')}>
+                                                            <img id="img04" src="./image/logo-04.jpg" alt="" />
+                                                        </div>
+                                                        <div className="logo-item" onClick={() => this.handleClickOpenImage('myimg05')}>
+                                                            <img id="img05" src="./image/logo-05.jpg" alt="" />
+                                                        </div>
+                                                        <div className="logo-item" onClick={() => this.handleClickOpenImage('myimg06')}>
+                                                            <img id="img06" src="./image/logo-06.jpg" alt="" />
+                                                        </div>
+                                                    </div>
+                                                    <div className="logo-list">
+                                                        <div className="logo-item">
+                                                            <img src="./image/logo-07.jpg" alt="" />
+                                                        </div>
+                                                        <div className="logo-item">
+                                                            <img src="./image/logo-08.jpg" alt="" />
+                                                        </div>
+                                                        <div className="logo-item">
+                                                            <img src="./image/logo-09.jpg" alt="" />
+                                                        </div>
+                                                        <div className="logo-item">
+                                                            <img src="./image/logo-10.jpg" alt="" />
+                                                        </div>
+                                                        <div className="logo-item">
+                                                            <img src="./image/logo-11.jpg" alt="" />
+                                                        </div>
+                                                        <div className="logo-item">
+                                                            <img src="./image/logo-12.jpg" alt="" />
+                                                        </div>
+                                                    </div>
+                                                    <div className="logo-list">
+                                                        <div className="logo-item">
+                                                            <img src="./image/logo-01.jpg" alt="" />
+                                                        </div>
+                                                        <div className="logo-item">
+                                                            <img src="./image/logo-10.jpg" alt="" />
+                                                        </div>
+                                                        <div className="logo-item">
+                                                            <img src="./image/logo-03.jpg" alt="" />
+                                                        </div>
+                                                        <div className="logo-item">
+                                                            <img src="./image/logo-08.jpg" alt="" />
+                                                        </div>
+                                                        <div className="logo-item">
+                                                            <img src="./image/logo-02.jpg" alt="" />
+                                                        </div>
+                                                        <div className="logo-item">
+                                                            <img src="./image/logo-09.jpg" alt="" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </section>
                                 </div>
+                            </div>
+                            <div id="myModal" className="modal">
+                                <span className="close" onClick={() => this.handleCloseImage()}>×</span>
+                                <img className="modal-content" id="img01" alt='' />
+                                <div id="caption" />
                             </div>
                         </ReactFullpage.Wrapper>
                     )
@@ -577,7 +707,7 @@ class App extends React.Component {
                     <Menu />
                 </div> */}
                 < Route path="/" exact component={Menu} />
-                <Route path="/brand" exact component={Brand} />
+                <Route path="/brand" component={Brand} />
                 <Route path="/band" exact component={Band} />
                 <Route path="/logo" exact component={Logo} />
             </Router >
