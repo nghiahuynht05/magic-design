@@ -345,7 +345,7 @@ class Home extends Component {
                                             </div>
                                         </div>
                                         <div className="aboutus">
-                                            <div className="layout">
+                                            <div className="layout" style={{ height: '85%' }}>
                                                 <div className="info">
                                                     <div className="detail">
                                                         <div className="image"> About US</div>
