@@ -8,6 +8,9 @@ import {
 
 import './style.css';
 
+import LogoComponent from './components/Logo';
+import BrandComponent from './components/Brand';
+
 import slider1 from './image/slider-1.jpg';
 import slider2 from './image/slider-2.jpg';
 import slider3 from './image/slider-3.jpg';
@@ -68,29 +71,6 @@ class App extends React.Component {
                 this.showSlides(1)
             }
         }
-    }
-
-    handleClickOpenImage = (item) => {
-        var modal = document.getElementById("myModal");
-        var img = document.getElementById(item);
-        var modalImg = document.getElementById("img01");
-        var captionText = document.getElementById("caption");
-
-        console.log(modal);
-        console.log(img);
-        console.log(modalImg);
-        console.log(captionText);
-        modal.style.display = "block";
-        modalImg.src = img.src;
-        captionText.innerHTML = img.alt;
-        document.getElementsByClassName('navbar')[0].style.display = 'contents';
-        console.log("end")
-    }
-
-    handleCloseImage = () => {
-        var modal = document.getElementById("myModal");
-        modal.style.display = "none";
-        document.getElementsByClassName('navbar')[0].style.display = 'block'
     }
 
     render() {
@@ -496,72 +476,6 @@ class App extends React.Component {
             />
         );
 
-        const Brand = () => (
-            <ReactFullpage
-                render={({ state, fullpageApi }) => {
-                    return (
-                        <ReactFullpage.Wrapper>
-                            <div className="container">
-                                <div className="content">
-                                    <section className="section" id="band">
-                                        <div className="navbar">
-                                            <div className="header">
-                                                <div className="logo">
-                                                    <a href="/"><img src={logo} alt="" /></a>
-                                                </div>
-                                                <ul className="menu">
-                                                    <li><span href="" onClick={() => fullpageApi.moveTo(1, 0)}>TEAM</span></li>
-                                                    <li><span href="" onClick={() => fullpageApi.moveTo(2, 0)}>LOGO</span></li>
-                                                    <li><span href="" onClick={() => fullpageApi.moveTo(3, 0)}>BRAND</span></li>
-                                                    <li><span href="" onClick={() => fullpageApi.moveTo(4, 0)}>ABOUT US</span></li>
-                                                    <li><span href="" onClick={() => fullpageApi.moveTo(5, 0)}>CONTACT</span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div className="brand-component">
-                                            <div className="layout" style={{ display: 'block' }}>
-                                                <div className="brand">
-                                                    <div className="brand-name">Brand</div>
-                                                    <div className="brand-notes">Những hình ảnh biết nói, biết an ủi bạn lúc các bạn cần điều gì đó để nhìn lại,
-                                                        tịnh tâm và đi tiếp...</div>
-                                                </div>
-                                                <div className="brand-info">
-                                                    <div className="project-info">
-                                                        <img src="./image/project-01.jpg" alt="" />
-                                                        <div className="project-name">Project Minh Oanh Beauty</div>
-                                                        <div className="project-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-                                                            pariatur aut maxime explicabo, facere doloremque et eius doloribus, sunt beatae expedita
-                                                            excepturi vel voluptatibus assumenda consectetur. Maxime accusamus eius praesentium!</div>
-                                                        <div className="project-contact">
-                                                            <div className="project-location">
-                                                                <div>Email</div>
-                                                                <div>mddesign.tdd@gmail.com</div>
-                                                            </div>
-                                                            <div className="project-location">
-                                                                <div>Phone</div>
-                                                                <div>+84 969 57 64 66</div>
-                                                            </div>
-                                                            <div className="project-location">
-                                                                <div>Address</div>
-                                                                <div>54 Dương Quang Ham, Danang City</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="project-image">
-                                                        <img src alt="" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </section>
-                                </div>
-                            </div>
-                        </ReactFullpage.Wrapper>
-                    )
-                }}
-            />
-        )
-
         const Band = () => (
             <ReactFullpage
                 render={({ state, fullpageApi }) => {
@@ -595,123 +509,12 @@ class App extends React.Component {
                 }}
             />
         )
-        const Logo = () => (
-            <ReactFullpage            
-                render={({ state, fullpageApi }) => {
-                    
-                    return (
-                        
-                        <ReactFullpage.Wrapper>
-                            <div className="container">
-                                <div className="content">
-                                    <section className="section" id="band">
-                                        <div className="navbar">
-                                            <div className="header">
-                                                <div className="logo">
-                                                    <a href="/"><img src={logo} alt="" /></a>
-                                                </div>
-                                                <ul className="menu">
-                                                    <li><span href="" onClick={() => fullpageApi.moveTo(1, 0)}>TEAM</span></li>
-                                                    <li><span href="" onClick={() => fullpageApi.moveTo(2, 0)}>LOGO</span></li>
-                                                    <li><span href="" onClick={() => fullpageApi.moveTo(3, 0)}>BRAND</span></li>
-                                                    <li><span href="" onClick={() => fullpageApi.moveTo(4, 0)}>ABOUT US</span></li>
-                                                    <li><span href="" onClick={() => fullpageApi.moveTo(5, 0)}>CONTACT</span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div className="brand-component">
-                                            <div className="layout" style={{ display: 'block' }}>
-                                                <div className="brand">
-                                                    <div className="brand-name">LOGO</div>
-                                                    <div className="brand-notes">Những hình ảnh biết nói, biết an ủi bạn lúc các bạn cần điều gì đó để nhìn lại,
-                                                        tịnh tâm và đi tiếp...</div>
-                                                </div>
-                                                <div className="logo-info">
-                                                    <div className="logo-list">
-                                                        <div className="logo-item" onClick={() => this.handleClickOpenImage('myimg01')}>
-                                                            <img id="myimg01" src={slidershow1} alt="" />
-                                                        </div>
-                                                        <div className="logo-item" onClick={() => this.handleClickOpenImage('myimg02')}>
-                                                            <img id="myimg02" src={slidershow2} alt="" />
-                                                        </div>
-                                                        <div className="logo-item" onClick={() => this.handleClickOpenImage('myimg03')}>
-                                                            <img id="img03" src={slidershow3} alt="" />
-                                                        </div>
-                                                        <div className="logo-item" onClick={() => this.handleClickOpenImage('myimg04')}>
-                                                            <img id="img04" src={slidershow4} alt="" />
-                                                        </div>
-                                                        <div className="logo-item" onClick={() => this.handleClickOpenImage('myimg05')}>
-                                                            <img id="img05" src={slidershow5} alt="" />
-                                                        </div>
-                                                        <div className="logo-item" onClick={() => this.handleClickOpenImage('myimg06')}>
-                                                            <img id="img06" src={slidershow6} alt="" />
-                                                        </div>
-                                                    </div>
-                                                    <div className="logo-list">
-                                                        <div className="logo-item">
-                                                            <img src={slidershow1} alt="" />
-                                                        </div>
-                                                        <div className="logo-item">
-                                                            <img src={slidershow2} alt="" />
-                                                        </div>
-                                                        <div className="logo-item">
-                                                            <img src={slidershow12} alt="" />
-                                                        </div>
-                                                        <div className="logo-item">
-                                                            <img src={slidershow3} alt="" />
-                                                        </div>
-                                                        <div className="logo-item">
-                                                            <img src={slidershow11} alt="" />
-                                                        </div>
-                                                        <div className="logo-item">
-                                                            <img src={slidershow1} alt="" />
-                                                        </div>
-                                                    </div>
-                                                    <div className="logo-list">
-                                                        <div className="logo-item">
-                                                            <img src={slidershow4} alt="" />
-                                                        </div>
-                                                        <div className="logo-item">
-                                                            <img src={slidershow3} alt="" />
-                                                        </div>
-                                                        <div className="logo-item">
-                                                            <img src={slidershow5} alt="" />
-                                                        </div>
-                                                        <div className="logo-item">
-                                                            <img src={slidershow7} alt="" />
-                                                        </div>
-                                                        <div className="logo-item">
-                                                            <img src={slidershow2} alt="" />
-                                                        </div>
-                                                        <div className="logo-item">
-                                                            <img src={slidershow10} alt="" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </section>
-                                </div>
-                            </div>
-                            <div id="myModal" className="modal">
-                                <span className="close" onClick={() => this.handleCloseImage()}>×</span>
-                                <img className="modal-content" id="img01" alt='' />
-                                <div id="caption" />
-                            </div>
-                        </ReactFullpage.Wrapper>
-                    )
-                }}
-            />
-        )
         return (
             <Router>
-                {/* <div >
-                    <Menu />
-                </div> */}
                 < Route path="/" exact component={Menu} />
-                <Route path="/brand" component={Brand} />
+                <Route path="/brand" component={BrandComponent} />
                 <Route path="/band" exact component={Band} />
-                <Route path="/logo" exact component={Logo} />
+                <Route path="/logo" exact component={LogoComponent} />
             </Router >
         )
     }
