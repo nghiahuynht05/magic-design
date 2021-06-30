@@ -2,6 +2,7 @@ import React from 'react';
 import {
     BrowserRouter as Router,
     Route,
+    Switch
 } from "react-router-dom";
 
 import './style.css';
@@ -16,10 +17,12 @@ class App extends React.Component {
     render() {
         return (
             <Router>
-                < Route path="/" exact component={HomeComponent} />
-                <Route path="/brand" exact component={BrandComponent} />
-                <Route path="/logo" exact component={LogoComponent} />
-                <Route component={NotFoundComponent} />
+                <Switch>
+                    < Route path="/" exact component={HomeComponent} />
+                    <Route path="/brand" exact component={BrandComponent} />
+                    <Route path="/logo" exact component={LogoComponent} />
+                    <Route component={NotFoundComponent} />
+                </Switch>
             </Router >
         )
     }
