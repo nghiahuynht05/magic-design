@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-import logo from '../image/logo-01.jpg';
+import logo from '../image/logo.png';
 
 class Brand extends Component {
 
@@ -16,11 +16,11 @@ class Brand extends Component {
                                         <a href="/"><img src={logo} alt="" /></a>
                                     </div>
                                     <ul className="menu">
-                                        {/* <li><span href="" onClick={() => fullpageApi.moveTo(1, 0)}>TEAM</span></li>
-                                        <li><span href="" onClick={() => fullpageApi.moveTo(2, 0)}>LOGO</span></li>
-                                        <li><span href="" onClick={() => fullpageApi.moveTo(3, 0)}>BRAND</span></li>
-                                        <li><span href="" onClick={() => fullpageApi.moveTo(4, 0)}>ABOUT US</span></li>
-                                        <li><span href="" onClick={() => fullpageApi.moveTo(5, 0)}>CONTACT</span></li> */}
+                                        {/* <li><span href="" >TEAM</span></li>
+                                        <li><span href="" >BRAND</span></li>
+                                        <li><span href="" >LOGO</span></li>
+                                        <li><span href="" >ABOUT US</span></li>
+                                        <li><span href="" >CONTACT</span></li> */}
                                     </ul>
                                 </div>
                             </div>

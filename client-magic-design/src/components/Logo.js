@@ -1,6 +1,5 @@
 import { Component } from 'react';
 
-
 import slidershow1 from '../image/logo-01.jpg';
 import slidershow2 from '../image/logo-02.jpg';
 import slidershow3 from '../image/logo-03.jpg';
@@ -13,7 +12,7 @@ import slidershow9 from '../image/logo-09.jpg';
 import slidershow10 from '../image/logo-10.jpg';
 import slidershow11 from '../image/logo-11.jpg';
 import slidershow12 from '../image/logo-12.jpg';
-import logo from '../image/logo-01.jpg';
+import logo from '../image/logo.png';
 
 class Logo extends Component {
     handleClickOpenImage = (item) => {
@@ -22,15 +21,10 @@ class Logo extends Component {
         var modalImg = document.getElementById("img01");
         var captionText = document.getElementById("caption");
 
-        console.log(modal);
-        console.log(img);
-        console.log(modalImg);
-        console.log(captionText);
         modal.style.display = "block";
         modalImg.src = img.src;
         captionText.innerHTML = img.alt;
         document.getElementsByClassName('navbar')[0].style.display = 'contents';
-        console.log("end")
     }
 
     handleCloseImage = () => {
@@ -42,7 +36,7 @@ class Logo extends Component {
     render() {
         return (
             <div>
-                <div className="container">
+                <div className="container" >
                     <div className="content">
                         <section className="section" id="band">
                             <div className="navbar">
@@ -51,11 +45,11 @@ class Logo extends Component {
                                         <a href="/"><img src={logo} alt="" /></a>
                                     </div>
                                     <ul className="menu">
-                                        {/* <li><span href="" onClick={() => fullpageApi.moveTo(1, 0)}>TEAM</span></li>
-                                        <li><span href="" onClick={() => fullpageApi.moveTo(2, 0)}>LOGO</span></li>
-                                        <li><span href="" onClick={() => fullpageApi.moveTo(3, 0)}>BRAND</span></li>
-                                        <li><span href="" onClick={() => fullpageApi.moveTo(4, 0)}>ABOUT US</span></li>
-                                        <li><span href="" onClick={() => fullpageApi.moveTo(5, 0)}>CONTACT</span></li> */}
+                                        {/* <Link to='/'><li><span href="">TEAM</span></li></Link>
+                                        <li><span href="" >BRAND</span></li>
+                                        <li><span href="" >LOGO</span></li>
+                                        <li><span href="" >ABOUT US</span></li>
+                                        <li><span href="" >CONTACT</span></li> */}
                                     </ul>
                                 </div>
                             </div>
@@ -139,7 +133,7 @@ class Logo extends Component {
                     <div id="caption" />
                 </div>
             </div>
-        );
+        )
     }
 }
 

@@ -23,6 +23,7 @@ body {
 
 a:-webkit-any-link {
   color: rgba(22, 22, 22, 0.78);
+  text-decoration: unset;
 
 }
 
