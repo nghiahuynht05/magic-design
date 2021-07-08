@@ -2,7 +2,7 @@
   "name": "client-magic-design",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/nghiahuynht05/deploy-masgic-design.git",
+  "homepage": "https://github.com/nghiahuynht05/magic-design.git",
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.19",
     "@testing-library/jest-dom": "^5.14.1",
